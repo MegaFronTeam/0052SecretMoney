@@ -2,21 +2,27 @@ mixin sProfile(data)
 	// start sProfile
 	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
 		+b.section-title
-			h2 Профиль
+			h1 Профиль
 		+e.wrap
 			+e.row.row
-				.col-lg-auto 
+				.col-md-6.col-lg-auto.order-1.order-lg-1
 					+e.avatar.avatar-js
 						+img('img/avatar.jpg')
-						+e.change(href='#') Сменить фото
-				.col-lg
+						label
+							input.input-upload(type='file' name='file')
+							+e.change Сменить фото
+				.col-md-12.col-lg.order-3.order-lg-2
 					table
 						mixin tr(key, val)
 							tr
 								td!= key
 								td!= val
 						+tr('ID', '454648889')
-				.col-lg-auto
+						+tr('ФИО', 'Викторовский Павел Валентинович')
+						+tr('Телефон', '+7 985 998 55 55')
+						+tr('Telegram', '@smaole')
+						+tr('Email', 'Sample@sample.com')
+				.col-md-6.col-lg-auto.order-2.order-lg-3
 					+e.edit
 						+e.edit-link(href='#') 
 							+icon('pencil')
@@ -27,4 +33,32 @@ mixin sProfile(data)
 						+e.edit-link(href='#') 
 							+icon('logOut')
 							| Выйти
+		h3 Мои покупки
+		+e.table-wrap
+			table
+				tr 
+					th ID
+					th Дата покупки
+					th Название тарифа
+					th Действие продукта в рамках тарифа
+					th Стоимость
+				mixin tr(title='Дивидендный 10К', price='120 000 ₽')
+					tr 
+						td 12123432
+						td 21.09.2023
+						td 
+							+img('img/table-img.png')
+							span!= title
+						td 12.04.2023 — 15.04.2024
+						td 
+							+e.price
+								!= price
+								a(href='#'): +iconC('info')
+				+tr()
+				+tr('Клуб «Мир без границ». Апгрейд', '80 000 ₽')
+				+tr()
+				+tr()
+				+tr()
+				+tr()
+				+tr()
 	// end sProfile

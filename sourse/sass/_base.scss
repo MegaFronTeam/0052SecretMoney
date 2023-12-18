@@ -109,8 +109,10 @@ body {
 	}
 }
 .main-center-wrap {
-	display: flex;
-	flex-grow: 1;
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		flex-grow: 1;
+	}
 }
 aside {
 	overflow: hidden;
@@ -199,7 +201,7 @@ main{
 		overflow-y: auto;
 		overflow-x: hidden;
 		max-height: calc(100vh - rem(197) - rem(45));
-		padding: rem(24);
+		padding: rem(22.600) rem(24) rem(24) rem(24);
 	}
 	@include media-breakpoint-up(xl) {
     max-height: calc(100vh - rem(94) - rem(45));
@@ -669,7 +671,7 @@ h1, .h1 {
 }
 
 .section-title {
-	h2 {
+	h1 {
 		margin-bottom: 0;
 		line-height: 1.4;
 	}

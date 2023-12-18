@@ -62,6 +62,25 @@ function eventHandler() {
 
 	});
 
+	let uploadavatarArr = document.querySelectorAll('.avatar-js');
+	if (uploadavatarArr.length > 0){
+		uploadavatarArr.forEach((uploadavatar) => {
+			let inputFile = uploadavatar.querySelector('.input-upload');
+			let img = uploadavatar.querySelector('img');
+			inputFile.addEventListener('change', () => {
+				var reader = new FileReader();
+				reader.onload = function(){ img.src = reader.result;}
+				reader.readAsDataURL(event.target.files[0]);
+	
+				// inputFile.files[0].name.length > 0 ? uploadavatar.classList.add('active') : uploadavatar.classList.remove('active');
+			});
+			// uploadavatar.querySelector('.upload-avatar__delete-photo').addEventListener('click', () => {
+			// 	img.src = '';
+			// 	uploadavatar.classList.remove('active');
+			// })
+		})
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
