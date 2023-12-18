@@ -1,0 +1,95 @@
+// start .sBaseBlock
+.sBaseBlock {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	min-height: 100%;
+	height: 100%;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	
+	&__row{
+		// height: 100%;
+		flex-grow: 1;
+		--bs-gutter-x: #{rem(16)};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title{
+		
+	}
+	&__col{
+		
+	}
+	&__item{
+		
+	}
+	&__col--form{
+
+	}
+	&__panel{
+		padding: rem(40);
+		border-radius: rem(16px);
+		min-height: 100%;
+		position: relative;
+		&--dark{
+			background: #101010;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.person-img{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				max-height: 100%;
+				max-width: 100%;
+				mix-blend-mode: lighten;
+			}
+		}
+	}
+	&__logo{
+		@include rfs(32px);
+		text-transform: uppercase;
+		max-width: rem(300);
+		img{
+			margin-bottom: rem(40);
+		}
+	}
+	&__panel--white{
+		width: rem(532);
+		background-color: var(--panel-bg);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sBaseBlock
+
+.login-page{
+	overflow-y: auto;
+	main{
+		overflow: visible;
+		background: none;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		max-height: none;
+		min-height: 100%;
+		// height: 100%;
+		// display: flex;
+		// min-height: calc(100vh);
+	}
+}
+
+.footer-block{
+	font-size: rem(11); 
+	opacity: 0.5;
+}

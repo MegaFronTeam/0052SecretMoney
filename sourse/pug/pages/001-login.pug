@@ -1,13 +1,13 @@
-extends ../layout/main.pug
+extends ../layout/login.pug
 
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sProfile/_sProfile.pug
+include ../blocks/sBaseBlock/_sBaseBlock.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'login-page' 
 	- let  bg= 'main.jpg'
 
 block title
@@ -16,7 +16,7 @@ block title
 block pagecontent
 
 	main
-		+sProfile
+		+sBaseBlock(title,'Авторизуйтесь в вашем личном кабинете')
 		
 		
 	//- +parts('footer')

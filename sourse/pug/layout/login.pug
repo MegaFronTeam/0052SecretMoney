@@ -1,7 +1,7 @@
 include include.pug
 include js-css.pug
 doctype html
-html(lang="ru"  data-bs-theme="dark")
+html(lang="ru" data-bs-theme="dark")
 	head
 		meta(charset="utf-8")
 
@@ -48,29 +48,7 @@ html(lang="ru"  data-bs-theme="dark")
 	//- body.loaded_hiding(class= mainPage) 
 	body(class=mainPage data-bg=bg)
 		.main-wrapper
-			+parts(haeder2 ? 'header2' : 'header')
-			.main-center-wrap
-				aside.aside#aside
-					nav
-						ul 
-							li: a(href="#") 
-								+icon('banknote')
-								| Сделки 
-							li: a(href="#") 
-								+icon('bar-chart-big')
-								| Аналитика
-							li: a(href="#") 
-								+icon('briefcase')
-								| Продукты
-							li: a(href="#") 
-								+icon('key-square')
-								span.d-none.d-lg-inline Реферальная программа
-								span.d-lg-none Реф. прог.
-							li: a(href="#") 
-								+icon('help-circle')
-								span.d-none.d-lg-inline Поддержка
-								span.d-lg-none Поддер.
-				block pagecontent
+			block pagecontent
 		
 
 		+allcjs()

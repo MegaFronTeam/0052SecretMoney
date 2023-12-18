@@ -117,7 +117,7 @@ body {
 aside {
 	overflow: hidden;
 	border-radius: rem(8) rem(8) 0 0;
-	background-color: $white;
+	background-color: var(--panel-bg, #fff);
 	@include media-breakpoint-up(lg) {
 		flex: 0 0 rem(94);
 		border-radius: rem(16);
@@ -193,7 +193,7 @@ aside {
 }
 main{
 	flex-grow: 1;
-	background-color: #fff;
+	background-color: var(--panel-bg, #fff);
 	border-radius: rem(8);
 	padding: rem(12);
 	@include media-breakpoint-up(lg) {
@@ -675,4 +675,10 @@ h1, .h1 {
 		margin-bottom: 0;
 		line-height: 1.4;
 	}
+}
+
+
+.btn-primary{
+	position: relative;
+	
 }

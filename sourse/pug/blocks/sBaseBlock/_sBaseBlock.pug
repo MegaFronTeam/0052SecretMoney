@@ -1,0 +1,32 @@
+mixin sBaseBlock(t, text)
+	// start sBaseBlock
+	+b.sBaseBlock.section#sBaseBlock&attributes(attributes)
+		+e.row.row
+			+e.col--aside.col
+				+e.panel--dark 
+					+e.logo
+						img(src="img/svg/logo.svg", alt="")
+						+e.title Секреты денег  от #[span.text-primary Алексея  Линецкого]
+					.d-none.d-lg-block: +img("img/person.png").person-img
+					+b.footer-block
+						div ИП Линецкий Максим Михайлович
+						div ОГРН 321519000027464 | ИНН 510802654907
+			+e.col--form.col-auto
+				+e.panel--white
+					+form-wrap
+						+e.title= t
+						+e.text= text
+						+input("Логин")
+						+input("Пароль",'password')
+						.row.mt-4
+							.col-lg-6
+								button.btn.btn-primary.w-100 Войти
+							.col-lg-6
+								button.btn.btn-light.w-100 Не помню пароль
+						label.form-check.form-switch
+							input(type="checkbox" checked).form-check-input
+							span.form-check-label Запомнить меня
+						+e.singup-text Еще не зарегистрировались?
+						a.btn.brn-outline-dark(href='#').w-100 Регистрация
+						a.btn.brn-outline-dark(href='#').w-100 Поддержка
+	// end sBaseBlock

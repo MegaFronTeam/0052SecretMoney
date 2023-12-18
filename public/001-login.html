@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="dark">
 	<head>
 		<meta charset="utf-8">
 		<title>Личный кабинет</title>
@@ -24,213 +24,61 @@
 			}
 		</script>
 	</head>
-	<body class="main-page" data-bg="main.jpg">
+	<body class="login-page" data-bg="main.jpg">
 		<div class="main-wrapper">
-			<script>addBlock(`header`)</script>
-			<div id="headerWrap"></div>
-			<div class="main-center-wrap">
-				<aside class="aside" id="aside">
-					<nav>
-						<ul> 
-							<li><a href="#"> 
-									<svg class="icon icon-banknote ">
-										<use xlink:href="img/svg/sprite.svg#banknote"></use>
-									</svg>Сделки </a></li>
-							<li><a href="#"> 
-									<svg class="icon icon-bar-chart-big ">
-										<use xlink:href="img/svg/sprite.svg#bar-chart-big"></use>
-									</svg>Аналитика</a></li>
-							<li><a href="#"> 
-									<svg class="icon icon-briefcase ">
-										<use xlink:href="img/svg/sprite.svg#briefcase"></use>
-									</svg>Продукты</a></li>
-							<li><a href="#"> 
-									<svg class="icon icon-key-square ">
-										<use xlink:href="img/svg/sprite.svg#key-square"></use>
-									</svg><span class="d-none d-lg-inline">Реферальная программа</span><span class="d-lg-none">Реф. прог.</span></a></li>
-							<li><a href="#"> 
-									<svg class="icon icon-help-circle ">
-										<use xlink:href="img/svg/sprite.svg#help-circle"></use>
-									</svg><span class="d-none d-lg-inline">Поддержка</span><span class="d-lg-none">Поддер.</span></a></li>
-						</ul>
-					</nav>
-				</aside>
-				<main>
-					<!-- start sProfile-->
-					<section class="sProfile section" id="sProfile">
-						<div class="section-title">
-							<h1>Профиль</h1>
-						</div>
-						<div class="sProfile__wrap">
-							<div class="sProfile__row row">
-								<div class="col-md-6 col-lg-auto order-1 order-lg-1">
-									<div class="sProfile__avatar avatar-js"><img src="img/avatar.jpg" alt="" loading="lazy"/>
-										<label>
-											<input class="input-upload" type="file" name="file"/>
-											<div class="sProfile__change">Сменить фото
-											</div>
-										</label>
+			<main>
+				<!-- start sBaseBlock-->
+				<div class="sBaseBlock section" id="sBaseBlock">
+					<div class="sBaseBlock__row row">
+						<div class="sBaseBlock__col sBaseBlock__col--aside col">
+							<div class="sBaseBlock__panel sBaseBlock__panel--dark"> 
+								<div class="sBaseBlock__logo"><img src="img/svg/logo.svg" alt=""/>
+									<div class="sBaseBlock__title">Секреты денег  от <span class="text-primary">Алексея  Линецкого</span>
 									</div>
 								</div>
-								<div class="col-md-12 col-lg order-3 order-lg-2">
-									<table>
-												<tr>
-													<td>ID</td>
-													<td>454648889</td>
-												</tr>
-												<tr>
-													<td>ФИО</td>
-													<td>Викторовский Павел Валентинович</td>
-												</tr>
-												<tr>
-													<td>Телефон</td>
-													<td>+7 985 998 55 55</td>
-												</tr>
-												<tr>
-													<td>Telegram</td>
-													<td>@smaole</td>
-												</tr>
-												<tr>
-													<td>Email</td>
-													<td>Sample@sample.com</td>
-												</tr>
-									</table>
+								<div class="d-none d-lg-block"><img class="person-img" src="img/person.png" alt="" loading="lazy"/>
 								</div>
-								<div class="col-md-6 col-lg-auto order-2 order-lg-3">
-									<div class="sProfile__edit">
-										<a class="sProfile__edit-link" href="#"> 
-											<svg class="icon icon-pencil ">
-												<use xlink:href="img/svg/sprite.svg#pencil"></use>
-											</svg>Редактировать профиль
-										</a>
-										<a class="sProfile__edit-link" href="#"> 
-											<svg class="icon icon-unlock ">
-												<use xlink:href="img/svg/sprite.svg#unlock"></use>
-											</svg>Сменить пароль
-										</a>
-										<a class="sProfile__edit-link" href="#"> 
-											<svg class="icon icon-logOut ">
-												<use xlink:href="img/svg/sprite.svg#logOut"></use>
-											</svg>Выйти
-										</a>
-									</div>
+								<div class="footer-block">
+									<div>ИП Линецкий Максим Михайлович</div>
+									<div>ОГРН 321519000027464 | ИНН 510802654907</div>
 								</div>
 							</div>
 						</div>
-						<h3>Мои покупки</h3>
-						<div class="sProfile__table-wrap">
-							<table>
-								<tr> 
-									<th>ID</th>
-									<th>Дата покупки</th>
-									<th>Название тарифа</th>
-									<th>Действие продукта в рамках тарифа</th>
-									<th>Стоимость</th>
-								</tr>
-									<tr> 
-										<td>12123432</td>
-										<td>21.09.2023</td>
-										<td> <img src="img/table-img.png" alt="" loading="lazy"/><span>Дивидендный 10К</span>
-										</td>
-										<td>12.04.2023 — 15.04.2024</td>
-										<td> 
-											<div class="sProfile__price">120 000 ₽<a href="#">
-													<svg class="iconC iconC-info ">
-														<use xlink:href="img/svg/spriteC.svg#info"></use>
-													</svg></a>
+						<div class="sBaseBlock__col sBaseBlock__col--form col-auto">
+							<div class="sBaseBlock__panel sBaseBlock__panel--white">
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__title">Личный кабинет
+										</div>
+										<div class="form-wrap__text">Авторизуйтесь в вашем личном кабинете
+										</div>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Логин"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Пароль"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="row mt-4">
+											<div class="col-lg-6">
+												<button class="btn btn-primary w-100">Войти</button>
 											</div>
-										</td>
-									</tr>
-									<tr> 
-										<td>12123432</td>
-										<td>21.09.2023</td>
-										<td> <img src="img/table-img.png" alt="" loading="lazy"/><span>Клуб «Мир без границ». Апгрейд</span>
-										</td>
-										<td>12.04.2023 — 15.04.2024</td>
-										<td> 
-											<div class="sProfile__price">80 000 ₽<a href="#">
-													<svg class="iconC iconC-info ">
-														<use xlink:href="img/svg/spriteC.svg#info"></use>
-													</svg></a>
+											<div class="col-lg-6">
+												<button class="btn btn-light w-100">Не помню пароль</button>
 											</div>
-										</td>
-									</tr>
-									<tr> 
-										<td>12123432</td>
-										<td>21.09.2023</td>
-										<td> <img src="img/table-img.png" alt="" loading="lazy"/><span>Дивидендный 10К</span>
-										</td>
-										<td>12.04.2023 — 15.04.2024</td>
-										<td> 
-											<div class="sProfile__price">120 000 ₽<a href="#">
-													<svg class="iconC iconC-info ">
-														<use xlink:href="img/svg/spriteC.svg#info"></use>
-													</svg></a>
-											</div>
-										</td>
-									</tr>
-									<tr> 
-										<td>12123432</td>
-										<td>21.09.2023</td>
-										<td> <img src="img/table-img.png" alt="" loading="lazy"/><span>Дивидендный 10К</span>
-										</td>
-										<td>12.04.2023 — 15.04.2024</td>
-										<td> 
-											<div class="sProfile__price">120 000 ₽<a href="#">
-													<svg class="iconC iconC-info ">
-														<use xlink:href="img/svg/spriteC.svg#info"></use>
-													</svg></a>
-											</div>
-										</td>
-									</tr>
-									<tr> 
-										<td>12123432</td>
-										<td>21.09.2023</td>
-										<td> <img src="img/table-img.png" alt="" loading="lazy"/><span>Дивидендный 10К</span>
-										</td>
-										<td>12.04.2023 — 15.04.2024</td>
-										<td> 
-											<div class="sProfile__price">120 000 ₽<a href="#">
-													<svg class="iconC iconC-info ">
-														<use xlink:href="img/svg/spriteC.svg#info"></use>
-													</svg></a>
-											</div>
-										</td>
-									</tr>
-									<tr> 
-										<td>12123432</td>
-										<td>21.09.2023</td>
-										<td> <img src="img/table-img.png" alt="" loading="lazy"/><span>Дивидендный 10К</span>
-										</td>
-										<td>12.04.2023 — 15.04.2024</td>
-										<td> 
-											<div class="sProfile__price">120 000 ₽<a href="#">
-													<svg class="iconC iconC-info ">
-														<use xlink:href="img/svg/spriteC.svg#info"></use>
-													</svg></a>
-											</div>
-										</td>
-									</tr>
-									<tr> 
-										<td>12123432</td>
-										<td>21.09.2023</td>
-										<td> <img src="img/table-img.png" alt="" loading="lazy"/><span>Дивидендный 10К</span>
-										</td>
-										<td>12.04.2023 — 15.04.2024</td>
-										<td> 
-											<div class="sProfile__price">120 000 ₽<a href="#">
-													<svg class="iconC iconC-info ">
-														<use xlink:href="img/svg/spriteC.svg#info"></use>
-													</svg></a>
-											</div>
-										</td>
-									</tr>
-							</table>
+										</div>
+										<label class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" checked="checked"/><span class="form-check-label">Запомнить меня</span>
+										</label>
+										<div class="form-wrap__singup-text">Еще не зарегистрировались?
+										</div><a class="btn brn-outline-dark w-100" href="#">Регистрация</a><a class="btn brn-outline-dark w-100" href="#">Поддержка</a>
+									</form>
+								</div>
+							</div>
 						</div>
-					</section>
-					<!-- end sProfile-->
-				</main>
-			</div>
+					</div>
+				</div>
+				<!-- end sBaseBlock-->
+			</main>
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>

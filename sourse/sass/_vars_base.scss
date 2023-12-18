@@ -26,8 +26,8 @@ $font-family-PTRootUI: 'PTRootUI', SFMono-Regular, Menlo, Monaco, Consolas, "Lib
 
 $link-decoration: inherit;
 
-$spacers: ( 0: 0, ) ;
-$position-values: ( 100: 100% ) ;
+// $spacers: ( 0: 0, ) ;
+// $position-values: ( 100: 100% ) ;
 $border-widths: ( 1: 1px,  ) ;
 $aspect-ratios: ( ) ;
 
@@ -41,7 +41,7 @@ $zindex-levels: (
 $enable-caret:                true ;
 $enable-rounded:              true ;
 $enable-shadows:              false ;
-$enable-gradients:            false ;
+$enable-gradients:            true ;
 $enable-transitions:          true ;
 $enable-reduced-motion:       true ;
 $enable-smooth-scroll:        true ;
@@ -55,5 +55,5 @@ $enable-negative-margins:     false ;
 $enable-deprecation-messages: true ;
 $enable-important-utilities:  true ;
 
-$enable-dark-mode:            false ;
+$enable-dark-mode:            true ;
 $color-mode-type:             data ; // `data` or `media-query`
