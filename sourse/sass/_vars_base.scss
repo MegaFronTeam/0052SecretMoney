@@ -1,7 +1,7 @@
-$default-font: "roboto";
+$default-font: "HelveticaNeueCyr";
 $addr: '../fonts/';
 $file-format: woff2;
-$rfs-rem-value: 16 !default;
+$rfs-rem-value: 14 !default;
 $em-base: $rfs-rem-value * 1px;
 $small: rem(14);
 $url: '../img/';
@@ -17,7 +17,12 @@ $rfs-breakpoint: 1200px !default;
 
 $font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ; 
 
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-monospace: 'Arial', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+
+$font-family-Inter: 'Inter', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+
+$font-family-HelveticaNeueLTStd: 'HelveticaNeueLTStd', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+$font-family-PTRootUI: 'PTRootUI', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
 
 $link-decoration: inherit;
 

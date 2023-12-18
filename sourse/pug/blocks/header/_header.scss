@@ -1,7 +1,11 @@
 
-	// start .header
-	.header {
-		 
+// start .header
+.header {
+	margin-bottom: rem(12);
+	@include media-breakpoint-up(md) {
+		margin-bottom: rem(16);
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

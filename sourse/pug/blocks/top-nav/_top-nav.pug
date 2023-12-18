@@ -20,15 +20,49 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+		+e.row.row
+			.col-auto.order-1.order-xl-1
+				+e.logo(href='/')
+					+img('img/svg/logo.svg')
+					| Секреты<br>денег
+			.col-12.col-xl.order-3.order-xl-2
+				+e.wrap--middle
+					.row
+						.col-12.col-md.col-xxl-auto.me-auto
+							+e.author.text-center.text-md-start Авторский Дивидендный портфель <br>
+								span Алексея Линецкого
+						.col.col-md-auto.col-xxl
+							+e.item
+								+e.item-text Стоимость портфеля
+								+e.price #[span.text-danger 1 124 856] ₽ 
+								.badge.bg-danger 
+									+icon('arrow-down')
+									| 22,75%
+						.col.col-md-auto.col-xxl
+							+e.item
+								+e.item-text Реализованная прибыль
+								+e.price #[span.text-success 1 124 856 ] ₽ 
+								.badge.bg-success 
+									+icon('arrow-up')
+									| 22,75%
+			+e.profile-col.col.order-2.order-xl-3
+				+e.wrap
+					+e.inner
+						+e.initial ВВ
+						+e.text
+							+e.name Викторовский Валентин
+							+e.tel(href='tel:+79569889988') +7 956 988 99 88
+						+e.log-out(href='#'): +icon('logOut')
+					+e.edit(href='#') Редактировать профиль
 	// end top-nav
+
+//- old-version
+	//- .col-4
+	//- .col.order-lg-0.order-last
+	//- 	.menu-mobile.menu-mobile--js
+	//- 		.menu-mobile__inner
+	//- 			+menu-toggle()
+	//- 			+mnu()
+		
+	//- .col-auto.d-lg-none
+	//- 	+menu-toggle()

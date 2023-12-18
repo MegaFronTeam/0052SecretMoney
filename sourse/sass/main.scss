@@ -12,7 +12,6 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/swiper/swiper.scss";
 
 @import "mixin";
-@import "fonts";
 // @import "bootstrap-theme/bootstrap";
 
 // Option B: Include parts of Bootstrap
@@ -30,6 +29,8 @@ $output-bourbon-deprecation-warnings: false;
 @import "root";
 @import "base";
 
+@import "fonts";
+
 @import '../pug/blocks/**/*.scss';
 // @import '../pug/blocks/form-wrap/form-wrap.scss';
 
@@ -45,12 +46,3 @@ $output-bourbon-deprecation-warnings: false;
 // @import '../pug/blocks/footer/_footer.scss';
 
 // @import "media"; // Всегда в конце
-
-
-
-
-
-/*
-  коммент
-	#{primary}
-*/

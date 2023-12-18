@@ -5,10 +5,11 @@
 
 // If font from googlefont, next lines remove
 
-// @include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
-// @include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "HelveticaNeueCyrRoman/HelveticaNeueCyr-Roman", $file-formats: $file-format);
+@include font-face ('Arial', $addr + "Arial/Arial-Regular", $file-formats: $file-format);
+@include font-face ('Inter', $addr + "Inter/Inter-Bold", 700, $file-formats: $file-format);
+@include font-face ('HelveticaNeueLTStd', $addr + "HelveticaNeueLTStd/HelveticaNeueLTStd-Bd", $file-formats: $file-format);
+@include font-face ('PTRootUI', $addr + "PTRootUI/PTRootUI-Regular", $file-formats: $file-format);
 
 // font-weight helper:
 // 100 Thin

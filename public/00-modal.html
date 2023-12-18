@@ -28,13 +28,43 @@
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
-			<main>
-				<div class="section container">
-					<h1>Modal page </h1><a class="btn btn-primary" data-fancybox data-type="ajax" href="modal/call.html">call</a>
-				</div>
-			</main>
-			<script>addBlock(`footer`)</script>
-			<div id="footerWrap"></div>
+			<div class="main-center-wrap">
+				<aside class="aside" id="aside">
+					<nav>
+						<ul> 
+							<li><a href="#"> 
+									<svg class="icon icon-banknote ">
+										<use xlink:href="img/svg/sprite.svg#banknote"></use>
+									</svg>Сделки </a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-bar-chart-big ">
+										<use xlink:href="img/svg/sprite.svg#bar-chart-big"></use>
+									</svg>Аналитика</a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-briefcase ">
+										<use xlink:href="img/svg/sprite.svg#briefcase"></use>
+									</svg>Продукты</a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-key-square ">
+										<use xlink:href="img/svg/sprite.svg#key-square"></use>
+									</svg><span class="d-none d-lg-inline">Реферальная программа</span><span class="d-lg-none">Реф. прог.</span></a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-help-circle ">
+										<use xlink:href="img/svg/sprite.svg#help-circle"></use>
+									</svg><span class="d-none d-lg-inline">Поддержка</span><span class="d-lg-none">Поддер.</span></a></li>
+						</ul>
+					</nav>
+				</aside>
+				<script>addBlock(`header`)</script>
+				<div id="headerWrap"></div>
+				<main>
+					<div class="section container">
+						<h1>Modal page </h1><a class="btn btn-primary" data-fancybox data-type="ajax" href="modal/call.html">call</a>
+					</div>
+				</main>
+				<script>addBlock(`footer`)</script>
+				<div id="footerWrap"></div>
+			</div>
 		</div>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>

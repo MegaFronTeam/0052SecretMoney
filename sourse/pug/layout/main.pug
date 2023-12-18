@@ -48,8 +48,29 @@ html(lang="ru")
 	//- body.loaded_hiding(class= mainPage) 
 	body(class=mainPage data-bg=bg)
 		.main-wrapper
-			block pagecontent
-				h3 content
+			+parts('header')
+			.main-center-wrap
+				aside.aside#aside
+					nav
+						ul 
+							li: a(href="#") 
+								+icon('banknote')
+								| Сделки 
+							li: a(href="#") 
+								+icon('bar-chart-big')
+								| Аналитика
+							li: a(href="#") 
+								+icon('briefcase')
+								| Продукты
+							li: a(href="#") 
+								+icon('key-square')
+								span.d-none.d-lg-inline Реферальная программа
+								span.d-lg-none Реф. прог.
+							li: a(href="#") 
+								+icon('help-circle')
+								span.d-none.d-lg-inline Поддержка
+								span.d-lg-none Поддер.
+				block pagecontent
 		
 
 		+allcjs()

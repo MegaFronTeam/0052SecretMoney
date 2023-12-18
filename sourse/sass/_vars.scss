@@ -7,15 +7,15 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-100: #F4F4F4;
+$gray-200: #ECEEF2;
 $gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
+$gray-400: #CBCFDE;
+$gray-500: #A7ACBE;
+$gray-600: #6B7082;
+$gray-700: #43485A;
 $gray-800: #343a40 !default;
-$gray-900: #212529 !default;
+$gray-900: #1B1A1D;
 $black:    #000 !default;
 // scss-docs-end gray-color-variables
 
@@ -36,14 +36,14 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #0d6efd !default;
+$blue:    #1C2AC7;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
-$red:     #dc3545 !default;
+$red:     #E9002A;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #198754 !default;
+$yellow:  #DA9B29;
+$green:   #119354;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
 // scss-docs-end color-variables
@@ -136,9 +136,9 @@ $orange-700: shade-color($orange, 40%) !default;
 $orange-800: shade-color($orange, 60%) !default;
 $orange-900: shade-color($orange, 80%) !default;
 
-$yellow-100: tint-color($yellow, 80%) !default;
+$yellow-100: #FFF7E9;
 $yellow-200: tint-color($yellow, 60%) !default;
-$yellow-300: tint-color($yellow, 40%) !default;
+$yellow-300: #F6E9CF;
 $yellow-400: tint-color($yellow, 20%) !default;
 $yellow-500: $yellow !default;
 $yellow-600: shade-color($yellow, 20%) !default;
@@ -298,7 +298,8 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
+$accent:        $blue !default;
+$primary:       $yellow !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -317,7 +318,8 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "accent":     $accent,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -436,7 +438,7 @@ $position-values: (
 
 $body-text-align:           null !default;
 $body-color:                $gray-900 !default;
-$body-bg:                   $white !default;
+$body-bg:                   $gray-200 !default;
 
 $body-secondary-color:      rgba($body-color, .75) !default;
 $body-secondary-bg:         $gray-200 !default;
@@ -517,7 +519,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           rem(16) !default;
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -630,11 +632,11 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                rem(32) !default;
+$h2-font-size:                rem(24) !default;
+$h3-font-size:                rem(18) !default;
+$h4-font-size:                rem(14) !default;
+$h5-font-size:                rem(12) !default;
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
@@ -654,7 +656,7 @@ $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        1.4 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
 
@@ -1484,12 +1486,12 @@ $toast-header-border-color:         $toast-border-color !default;
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size:                   .75em !default;
-$badge-font-weight:                 $font-weight-bold !default;
-$badge-color:                       $white !default;
-$badge-padding-y:                   .35em !default;
-$badge-padding-x:                   .65em !default;
-$badge-border-radius:               var(--#{$prefix}border-radius) !default;
+$badge-font-size:                   rem(12) !default;
+$badge-font-weight:                 400 !default;
+$badge-color:                       $body-color !default;
+$badge-padding-y:                   rem(5.6) !default;
+$badge-padding-x:                   rem(8) !default;
+$badge-border-radius:               rem(4) !default;
 // scss-docs-end badge-variables
 
 

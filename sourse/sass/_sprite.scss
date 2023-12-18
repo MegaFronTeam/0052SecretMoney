@@ -7,10 +7,35 @@
 	fill: currentColor;
 }
 
+.icon-arrow-down {
+	$h: 11;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(5 / #{$h} *1em );
+}
+.icon-arrow-up {
+	$h: 11;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(6 / #{$h} *1em );
+}
+.icon-banknote {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
+.icon-bar-chart-big {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
 .icon-basket {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
+}
+.icon-briefcase {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
 }
 .icon-check {
 	$h: 27;
@@ -22,10 +47,25 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-help-circle {
+	$h: 20;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
 .icon-instagram {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-key-square {
+	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
+}
+.icon-logOut {
+	$h: 21;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(20 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;
