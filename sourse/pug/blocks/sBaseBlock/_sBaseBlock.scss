@@ -45,6 +45,7 @@
 				max-height: 100%;
 				max-width: 100%;
 				mix-blend-mode: lighten;
+				max-width: calc(100% - 200px);
 			}
 		}
 	}
@@ -54,10 +55,11 @@
 		max-width: rem(300);
 		img{
 			margin-bottom: rem(40);
+		
 		}
 	}
 	&__panel--white{
-		width: rem(532);
+		width: calc(#{rem(232)} + 20vw);
 		background-color: var(--panel-bg);
 		display: flex;
 		flex-direction: column;
@@ -74,6 +76,10 @@
 
 .login-page{
 	overflow-y: auto;
+	.main-wrapper{
+		padding: calc(env(safe-area-inset-top, 0px) + 1rem) 1.1428571429rem !important;
+
+	}
 	main{
 		overflow: visible;
 		background: none;

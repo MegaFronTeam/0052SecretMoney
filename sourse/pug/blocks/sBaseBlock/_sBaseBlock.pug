@@ -14,19 +14,19 @@ mixin sBaseBlock(t, text)
 			+e.col--form.col-auto
 				+e.panel--white
 					+form-wrap
-						+e.title= t
-						+e.text= text
+						h1= t
+						.h3.mb-4= text
 						+input("Логин")
 						+input("Пароль",'password')
-						.row.mt-4
+						.row.my-4.gy-2
 							.col-lg-6
 								button.btn.btn-primary.w-100 Войти
 							.col-lg-6
 								button.btn.btn-light.w-100 Не помню пароль
-						label.form-check.form-switch
+						label.form-check.form-switch.mb-4
 							input(type="checkbox" checked).form-check-input
 							span.form-check-label Запомнить меня
-						+e.singup-text Еще не зарегистрировались?
-						a.btn.brn-outline-dark(href='#').w-100 Регистрация
-						a.btn.brn-outline-dark(href='#').w-100 Поддержка
+						+e.sign-up-text.h2.mb-3 Еще не зарегистрировались?
+						a.btn.btn-outline-dark(href='#').w-100 Регистрация
+						a.btn.btn-dark(href='#').w-100.mt-3 Поддержка
 	// end sBaseBlock
