@@ -17,6 +17,11 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(6 / #{$h} *1em );
 }
+.icon-arrowBack {
+	$h: 11;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(12 / #{$h} *1em );
+}
 .icon-banknote {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -51,6 +56,11 @@
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
+}
+.icon-info {
+	$h: 17;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
 }
 .icon-instagram {
 	$h: 24;
