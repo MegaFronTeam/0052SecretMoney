@@ -193,11 +193,13 @@ main{
 	flex-grow: 1;
 	background-color: #fff;
 	border-radius: rem(8);
+	padding: rem(12);
 	@include media-breakpoint-up(lg) {
 		border-radius: rem(16);
 		overflow-y: auto;
 		overflow-x: hidden;
 		max-height: calc(100vh - rem(197) - rem(45));
+		padding: rem(24);
 	}
 	@include media-breakpoint-up(xl) {
     max-height: calc(100vh - rem(94) - rem(45));
@@ -663,5 +665,12 @@ h1, .h1 {
 		stroke-width: rem(1);
 		margin-right: rem(4);
 		vertical-align: top;
+	}
+}
+
+.section-title {
+	h2 {
+		margin-bottom: 0;
+		line-height: 1.4;
 	}
 }

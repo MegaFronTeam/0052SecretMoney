@@ -1,0 +1,30 @@
+mixin sProfile(data)
+	// start sProfile
+	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
+		+b.section-title
+			h2 Профиль
+		+e.wrap
+			+e.row.row
+				.col-lg-auto 
+					+e.avatar.avatar-js
+						+img('img/avatar.jpg')
+						+e.change(href='#') Сменить фото
+				.col-lg
+					table
+						mixin tr(key, val)
+							tr
+								td!= key
+								td!= val
+						+tr('ID', '454648889')
+				.col-lg-auto
+					+e.edit
+						+e.edit-link(href='#') 
+							+icon('pencil')
+							| Редактировать профиль
+						+e.edit-link(href='#') 
+							+icon('unlock')
+							| Сменить пароль
+						+e.edit-link(href='#') 
+							+icon('logOut')
+							| Выйти
+	// end sProfile
