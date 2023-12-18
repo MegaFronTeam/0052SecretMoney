@@ -13,8 +13,23 @@
 		margin-bottom: rem(15);
 	}
 	label {
-		width: 100%;
+		// width: 100%;
 		display: block;
+	}
+	&__btn-row{
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: 10px;
+		}
+	}
+	&__sms-row{
+		margin-bottom: rem(24);
+		input{
+			width: rem(49);
+			border-radius: 12px;
+			text-align: center;
+			padding: rem(8) 0;
+			font-size: rem(28);
+		}
 	}
 }
 
