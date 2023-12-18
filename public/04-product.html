@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>VIP чаты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page" data-bg="main.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<div class="main-center-wrap">
+				<aside class="aside" id="aside">
+					<nav>
+						<ul> 
+							<li><a href="#"> 
+									<svg class="icon icon-banknote ">
+										<use xlink:href="img/svg/sprite.svg#banknote"></use>
+									</svg>Сделки </a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-bar-chart-big ">
+										<use xlink:href="img/svg/sprite.svg#bar-chart-big"></use>
+									</svg>Аналитика</a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-briefcase ">
+										<use xlink:href="img/svg/sprite.svg#briefcase"></use>
+									</svg>Продукты</a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-key-square ">
+										<use xlink:href="img/svg/sprite.svg#key-square"></use>
+									</svg><span class="d-none d-lg-inline">Реферальная программа</span><span class="d-lg-none">Реф. прог.</span></a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-help-circle ">
+										<use xlink:href="img/svg/sprite.svg#help-circle"></use>
+									</svg><span class="d-none d-lg-inline">Поддержка</span><span class="d-lg-none">Поддер.</span></a></li>
+						</ul>
+					</nav>
+				</aside>
+				<main>
+					<!-- start sProduct-->
+					<section class="sProduct section" id="sProduct">
+						<div class="description">
+							<div class="title-wrap">
+								<svg class="icon icon-arrowBack ">
+									<use xlink:href="img/svg/sprite.svg#arrowBack"></use>
+								</svg>
+								<h1>VIP чаты</h1>
+							</div>
+							<p>Покупка доставка и таможенная очистка автомобилей с любого рынка мира</p>
+							<p>Готов взять в управление деньги. Купить машины те которые пользуются максимальным спросом и ликвидностью на рынке. Привезти растаможить и продать через свою сеть своими сотрудниками. Прибыль поделить 50/50.Готов взять в управление деньги. Купить машины те которые пользуются максимальным спросом и ликвидностью на рынке. Привезти растаможить и продать через свою сеть своими сотрудниками. Прибыль поделить 50/50.</p>
+						</div>
+						<div class="chats-group">
+							<div class="chats-group__chat">
+								<h3>Чат инвестиций</h3>
+								<p>Покупка доставка и таможенная очистка автомобилей с любого рынка мира. Готов взять в управление деньги. Купить машины те которые пользуются максимальным спросом и ликвидностью на рынке.</p>
+								<button class="btn">Подключиться к чату</button>
+							</div>
+							<div class="chats-group__chat">
+								<h3>Чат нетворкинга</h3>
+								<p>Покупка доставка и таможенная очистка автомобилей с любого рынка мира. Готов взять в управление деньги. Купить машины те которые пользуются максимальным спросом и ликвидностью на рынке.</p>
+								<button class="btn">Подключиться к чату</button>
+							</div>
+						</div>
+						<div class="offer">
+							<div class="valid">
+								<div class="valid-until">
+									<p>Действует до</p>
+									<p>24.12.2024</p>
+								</div>
+								<button class="btn btn-primary">Продлить</button>
+							</div>
+						</div>
+						<div class="shopping">
+							<div class="shopping__title-wrap">
+								<p>Мои покупки продукта</p>
+								<button class="btn">Все покупки</button>
+							</div>
+							<div class="shopping__card">
+								<div class="id">
+									<p>ID 12123432</p>
+									<p>21.09.2023
+										<svg class="icon icon-info ">
+											<use xlink:href="img/svg/sprite.svg#info"></use>
+										</svg>
+									</p>
+								</div>
+								<p>Клуб «Мир без границ». Апгрейд</p>
+								<div class="valitity-period">
+									<div class="period">
+										<p>Действие продукта в рамках тарифа</p>
+										<p>12.04.2023 — 15.04.2024</p>
+									</div>
+									<p class="price">120 000 р.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- end sProduct-->
+				</main>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
