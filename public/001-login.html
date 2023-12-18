@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="dark">
 	<head>
 		<meta charset="utf-8">
 		<title>Личный кабинет</title>
@@ -35,7 +35,9 @@
 								<div class="sBaseBlock__logo"><img src="img/svg/logo.svg" alt=""/>
 									<div class="sBaseBlock__title">Секреты денег  от <span class="text-primary">Алексея  Линецкого</span>
 									</div>
-								</div><img class="person-img" src="img/person.png" alt="" loading="lazy"/>
+								</div>
+								<div class="d-none d-lg-block"><img class="person-img" src="img/person.png" alt="" loading="lazy"/>
+								</div>
 								<div class="footer-block">
 									<div>ИП Линецкий Максим Михайлович</div>
 									<div>ОГРН 321519000027464 | ИНН 510802654907</div>
@@ -43,7 +45,34 @@
 							</div>
 						</div>
 						<div class="sBaseBlock__col sBaseBlock__col--form col-auto">
-							<div class="sBaseBlock__panel sBaseBlock__panel--white">white
+							<div class="sBaseBlock__panel sBaseBlock__panel--white">
+								<div class="form-wrap">
+									<form>
+										<div class="form-wrap__title">Личный кабинет
+										</div>
+										<div class="form-wrap__text">Авторизуйтесь в вашем личном кабинете
+										</div>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Логин"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="password" name="password" type="password" placeholder="Пароль"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="row mt-4">
+											<div class="col-lg-6">
+												<button class="btn btn-primary w-100">Войти</button>
+											</div>
+											<div class="col-lg-6">
+												<button class="btn btn-light w-100">Не помню пароль</button>
+											</div>
+										</div>
+										<label class="form-check form-switch">
+											<input class="form-check-input" type="checkbox" checked="checked"/><span class="form-check-label">Запомнить меня</span>
+										</label>
+										<div class="form-wrap__singup-text">Еще не зарегистрировались?
+										</div><a class="btn brn-outline-dark w-100" href="#">Регистрация</a><a class="btn brn-outline-dark w-100" href="#">Поддержка</a>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
