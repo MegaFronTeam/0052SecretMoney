@@ -156,8 +156,12 @@
 	&__author {
 		font-size: rem(14);
 		line-height: 1.2;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(11);
+		}
 		@include media-breakpoint-up(xxl) {
 			min-width: rem(250);
+			font-size: rem(14);
 		}
 		span {
 			font-family: $font-family-HelveticaNeueLTStd;
