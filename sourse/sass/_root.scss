@@ -2,6 +2,8 @@
 :root {
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
+
+	--panel-bg: #fff;
 	@media (min-width: 1200px) {
 		--bs-body-font-size: #{$em-base};
 	}

@@ -1,0 +1,16 @@
+mixin sBaseBlock(data)
+	// start sBaseBlock
+	+b.sBaseBlock.section#sBaseBlock&attributes(attributes)
+		+e.row.row
+			+e.col--aside.col
+				+e.panel--dark 
+					+e.logo
+						img(src="img/svg/logo.svg", alt="")
+						+e.title Секреты денег  от #[span.text-primary Алексея  Линецкого]
+					+img("img/person.png").person-img
+					+b.footer-block
+						div ИП Линецкий Максим Михайлович
+						div ОГРН 321519000027464 | ИНН 510802654907
+			+e.col--form.col-auto
+				+e.panel--white white
+	// end sBaseBlock
