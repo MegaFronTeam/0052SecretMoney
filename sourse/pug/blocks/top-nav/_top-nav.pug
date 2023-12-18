@@ -17,7 +17,7 @@ mixin mob-mnu()
 		+e.inner
 			+mnu()
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(price) 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		+e.row.row
@@ -31,14 +31,14 @@ mixin top-nav()
 						.col-12.col-md.col-xxl-auto.me-auto
 							+e.author.text-center.text-md-start Авторский Дивидендный портфель <br>
 								span Алексея Линецкого
-						.col.col-md-auto.col-xxl
+						.col.col-md-auto.col-xxl(class=(price ? 'd-none d-md-block' : ''))
 							+e.item
 								+e.item-text Стоимость портфеля
 								+e.price #[span.text-danger 1 124 856] ₽ 
 								.badge.bg-danger 
 									+icon('arrow-down')
 									| 22,75%
-						.col.col-md-auto.col-xxl
+						.col.col-md-auto.col-xxl(class=(price ? 'd-none d-md-block' : ''))
 							+e.item
 								+e.item-text Реализованная прибыль
 								+e.price #[span.text-success 1 124 856 ] ₽ 

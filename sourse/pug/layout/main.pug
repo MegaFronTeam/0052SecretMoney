@@ -48,7 +48,7 @@ html(lang="ru")
 	//- body.loaded_hiding(class= mainPage) 
 	body(class=mainPage data-bg=bg)
 		.main-wrapper
-			+parts('header')
+			+parts(haeder2 ? 'header2' : 'header')
 			.main-center-wrap
 				aside.aside#aside
 					nav
