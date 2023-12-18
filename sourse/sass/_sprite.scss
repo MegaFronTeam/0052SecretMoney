@@ -77,17 +77,15 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
 }
-<<<<<<< HEAD
-.icon-play {
-	$h: 59;
-	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(56 / #{$h} *1em );
-=======
 .icon-pencil {
 	$h: 20;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(20 / #{$h} *1em );
->>>>>>> 9b833fad807786fae2dde12da01ff464cce6902b
+}
+.icon-play {
+	$h: 59;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(56 / #{$h} *1em );
 }
 .icon-telegram {
 	$h: 16;
