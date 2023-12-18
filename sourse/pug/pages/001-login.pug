@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sProfile/_sProfile.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+
+	main
+		+sProfile
+		
+		
+	//- +parts('footer')
+      
+
+
+
