@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sProducts/_sProducts.pug
+
+block variables
+	- let  mainPage= 'main-page'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Продукты'
+	title= title
+block pagecontent
+
+	main
+		//- +sProducts
+		+sProducts
+		
+	//- +parts('footer')
+      
+
+
+
