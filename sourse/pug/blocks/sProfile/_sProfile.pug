@@ -4,12 +4,18 @@ mixin sProfile(data)
 		+b.section-title
 			h2 Профиль
 		+e.wrap
-			.row
+			+e.row.row
 				.col-lg-auto 
 					+e.avatar.avatar-js
 						+img('img/avatar.jpg')
 						+e.change(href='#') Сменить фото
 				.col-lg
+					table
+						mixin tr(key, val)
+							tr
+								td!= key
+								td!= val
+						+tr('ID', '454648889')
 				.col-lg-auto
 					+e.edit
 						+e.edit-link(href='#') 
