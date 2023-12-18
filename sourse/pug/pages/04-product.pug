@@ -1,0 +1,26 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sProduct/_sProduct.pug
+
+block variables
+	- let  mainPage= 'main-page'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'VIP чаты'
+	title= title
+block pagecontent
+
+	main
+		//- +sProduct
+		+sProduct
+		
+	//- +parts('footer')
+      
+
+
+
