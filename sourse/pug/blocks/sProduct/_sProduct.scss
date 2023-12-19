@@ -19,6 +19,7 @@
 			grid-auto-flow: row;
 			.valid {
 				margin-bottom: rem(24);
+				padding: rem(16);
 			}
 			.description {
 				order: -2;
@@ -56,11 +57,15 @@
 	// description
 	.description {
 		display: grid;
-		gap: rem(24);
+		gap: rem(16);
+		@include media-breakpoint-up(lg) {
+			gap: rem(24);
+		}
 		.title-wrap {
 			.icon {
-				font-size: rem(20);
-				color: black;
+				font-size: rem(14);
+				fill: none ;
+				stroke: currentColor;
 			}
 			display: flex;
 			align-items:center;
@@ -68,24 +73,35 @@
 		}
 		h2 {
 			color: var(--bs-heading-color);
+			font-size: rem(18);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(24);
+			}
+		}
+		@include media-breakpoint-up(lg) {
 			font-size: rem(24);
 		}
+		
 	}
 	//- chats-group
 	.chats-group {
-		display: grid;
-		gap: rem(16);
+
 		&__chat {
 			padding: rem(16);
 			position: relative;
-			display: grid;
-			gap: inherit;
-			border-radius: $border-radius;
+			border-radius: rem(12);
 			background-color: $mark-bg;
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+			h3 {
+				margin-bottom: rem(16);
+			}
 			p {
 				max-width: 100%;
 				color: $gray-700;
 				line-height: 140%;
+				margin-bottom: rem(16);
 			}
 			button {
 				justify-self: start;
@@ -113,7 +129,7 @@
 		.video-link {
 			display: block;
 			aspect-ratio: 4 /2.3;
-			width: rem(319);
+			max-width: rem(319);
 			border-radius: rem(12);
 			overflow: hidden;
 			position: relative;
@@ -122,6 +138,7 @@
 			background-size: cover;
 			@include media-breakpoint-up(lg) {
 				width: 100%;
+				max-width: none;
 			}
 			svg {
 				position: absolute;
@@ -136,10 +153,10 @@
 			margin-top: rem(16);
 		}
 		.valid {
-			background: $gray-100;
-			border-radius: $border-radius;
+			background: var(--stock-price-bg, $gray-100);
+			border-radius: rem(12);
 			display: flex;
-			padding: rem(16);
+			padding: rem(12);
 			justify-content: space-between;
 			align-items:center;
 			margin-bottom: rem(16);
@@ -148,15 +165,18 @@
 				line-height: 140%;
 			}
 			p:last-child {
-				font-size: rem(24);
-				color: $gray-900;
+				font-size: rem(18);
+				color: var(--price-color-dark,rgba(var(--bs-success-rgb),var(--bs-text-opacity)));
+				@include media-breakpoint-up(lg) {
+					font-size: rem(24);
+				}
 			}
 		}
 	}
 	//- my shopping
 	.shopping {
 		h3 {
-			color: var(--bs-heading-color);
+			color: var(--bs-heading-color, $gray-100);
 			font-weight: 400;
 		}
 		&__title-wrap {
@@ -167,21 +187,19 @@
 		}
 		button {
 			border-radius: rem(8);
-			font-size: rem(12);
-			border: 1px solid $gray-600;
 		}
 		.group {
 			display: grid;
 			gap: rem(16);
 		}
 		&__card {
-			border-radius: $border-radius;
+			border-radius: rem(12);
 			padding: rem(16);
-			background: $gray-100;
+			background: var(--stock-price-bg);
 			display: grid;
 			gap: rem(16);
 			p {
-				color: $gray-900;
+				color: var(--price-color-dark,rgba(var(--bs-success-rgb),var(--bs-text-opacity)));
 			}
 			.id {
 				display: flex;

@@ -12,10 +12,27 @@
 	h1, h2 {
 		margin-bottom: rem(24);
 	}
-
+	@include media-breakpoint-down(lg) {
+		h2 {
+			font-size: rem(18);
+		}
+		h1, h2 {
+			margin-bottom: rem(16);
+		}
+	}
+	.group {
+		max-width: rem(1000);
+	}
 	.products-group {
-		gap: rem(24);
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(16);
+		margin: 0;
 		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg) {
+			gap: rem(24);
+			grid-template-columns: repeat(auto-fit, rem(295));
+		}
 		h3 {
 			margin-bottom: rem(2);
 			color: $gray-900;
@@ -26,18 +43,18 @@
 		&__card {
 			margin: 0;
 			.img-wrap {
-				aspect-ratio: 33 / 26;
+				aspect-ratio: 26 / 18;
 				position: relative;
 				img {
 					position: absolute;
-					bottom: rem(31);
-					right: 0;
+					bottom: rem(20);
+					right: rem(-31);
 					width: 136%;
 				}
 			}
 			padding: rem(16);
 			overflow: hidden;
-			border-radius: $border-radius;
+			border-radius: rem(12);
 			background-color: $mark-bg;
 			max-width: rem(294.5);
 		}
