@@ -93,7 +93,12 @@
 			padding: rem(9) rem(12);
 		}
 	}
-
+	&__price {
+		color: $gray-600;
+		span {
+			color: var(--body-color-dark-secondary, $body-color);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
