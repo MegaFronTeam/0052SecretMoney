@@ -683,5 +683,21 @@ h1, .h1 {
 
 .btn-primary{
 	position: relative;
-	
+	z-index: 2;
+	&::before{
+		content: '';
+		z-index: -1;
+		inset: 0;
+		position: absolute;
+		background: linear-gradient(180deg, #EFB843 0%, #E6A224 100%);
+		border-radius: inherit;
+		@include mt();
+		transition: opacity .15s ease-in-out;
+		opacity: var(--op, 1);
+	}
+	&.active,
+	&:active,
+	&:hover{
+		--op: 0;
+	}
 }
