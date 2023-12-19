@@ -54,13 +54,15 @@
 		}
 	}
 	img.bg {
+		display: none;
 		position: absolute;
 		bottom: rem(-24);
 		right: rem(-24);
 		z-index: 0;
-		max-width: 100%;
-		@include media-breakpoint-down(lg) {
-			display: none;
+		max-width: calc(100% - rem(400));
+		max-height: calc(100% - rem(200));
+		@include media-breakpoint-up(lg) {
+			display: block;
 		}
 	}
 
