@@ -16,12 +16,12 @@
 	&__contant {
 		position: relative;
 		z-index: 2;
-		max-width: rem(680);
 		display: flex;
 		flex-direction: column;
 		gap: rem(16);
 		@include media-breakpoint-up(lg) {
 			align-items: start;
+			max-width: rem(680);
 		}
 		p {
 			margin-bottom: 0;

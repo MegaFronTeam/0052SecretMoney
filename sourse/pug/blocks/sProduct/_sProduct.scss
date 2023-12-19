@@ -49,6 +49,7 @@
 		line-height: 160%;
 	}
 
+	// description
 	.description {
 		display: grid;
 		gap: rem(24);
@@ -67,6 +68,7 @@
 			font-size: rem(24);
 		}
 	}
+	//- chats-group
 	.chats-group {
 		display: grid;
 		gap: rem(16);
@@ -86,7 +88,30 @@
 			}
 		}
 	}
-	.offer{
+	//- offer
+	.offer {
+		.video-link {
+			display: block;
+			aspect-ratio: 4 /2.3;
+			width: rem(319);
+			border-radius: rem(12);
+			overflow: hidden;
+			position: relative;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url("../img/ref-prev-video.png"), lightgray -14.48px 0px / 112.81% 100% no-repeat;
+			background-position: center;
+			background-size: cover;
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+			}
+			svg {
+				position: absolute;
+				width: rem(55);
+				color: $gray-200;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
 		.descr {
 			margin-top: rem(16);
 		}
@@ -97,6 +122,7 @@
 			padding: rem(16);
 			justify-content: space-between;
 			align-items:center;
+			margin-bottom: rem(24);
 			p:first-child {
 				color: $gray-600;
 				line-height: 140%;
@@ -107,6 +133,7 @@
 			}
 		}
 	}
+	//- my shopping
 	.shopping {
 		h3 {
 			color: var(--bs-heading-color);
@@ -169,7 +196,6 @@
 				line-height: 140%;
 			}
 		}
-		
 	}
 
 	&__slide{

@@ -24,8 +24,9 @@
 			color: $dark;
 		}
 		&__card {
+			margin: 0;
 			.img-wrap {
-				aspect-ratio: rem(331) / rem(263);
+				aspect-ratio: 33 / 26;
 				position: relative;
 				img {
 					position: absolute;
