@@ -18,11 +18,22 @@
 		margin-bottom: rem(40);
 		h3 {
 			margin-bottom: rem(2);
+			color: $gray-900;
 		}
 		a {
 			color: $dark;
 		}
 		&__card {
+			.img-wrap {
+				aspect-ratio: rem(331) / rem(263);
+				position: relative;
+				img {
+					position: absolute;
+					bottom: rem(31);
+					right: 0;
+					width: 136%;
+				}
+			}
 			padding: rem(16);
 			overflow: hidden;
 			border-radius: $border-radius;

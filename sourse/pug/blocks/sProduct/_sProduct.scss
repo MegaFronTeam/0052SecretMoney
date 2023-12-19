@@ -6,10 +6,11 @@
 			--bs-gutter-y: var(--bs-gutter-x);
 			}
 		display: grid;
-		grid-template-columns: 58% 32%;
+		grid-template-columns: 58% minmax(rem(325), 32%);
 		justify-content: space-between;
 		grid-template-rows: repeat(2, min-content);
 		row-gap: rem(40);
+		column-gap: rem(40);
 		grid-auto-flow: column;
 		@include media-breakpoint-down(lg) {
 			row-gap: rem(16);
@@ -39,11 +40,15 @@
 	h1, h2, h3, p {
 		margin-bottom: 0;
 	}
+	h3 {
+		color: $gray-900;
+	}
 	p.descr {
 		color: $gray-600;
 		font-size: rem(18);
 		line-height: 160%;
 	}
+
 	.description {
 		display: grid;
 		gap: rem(24);
@@ -58,7 +63,7 @@
 			gap: inherit;
 		}
 		h2 {
-			color: $gray-700;
+			color: var(--bs-heading-color);
 			font-size: rem(24);
 		}
 	}
@@ -98,12 +103,13 @@
 			}
 			p:last-child {
 				font-size: rem(24);
+				color: $gray-900;
 			}
 		}
 	}
 	.shopping {
 		h3 {
-			color: $gray-700;
+			color: var(--bs-heading-color);
 			font-weight: 400;
 		}
 		&__title-wrap {
@@ -127,6 +133,9 @@
 			background: $gray-100;
 			display: grid;
 			gap: rem(16);
+			p {
+				color: $gray-900;
+			}
 			.id {
 				display: flex;
 				justify-content: space-between;
