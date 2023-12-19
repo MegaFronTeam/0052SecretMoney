@@ -21,16 +21,16 @@
 		}
 	}
 	.group {
-		max-width: rem(1000);
+		max-width: rem(935);
 		&__body {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
+			grid-template-columns: repeat(auto-fill, minmax(295px, 1fr) ) ;
 			gap: rem(16);
 			margin: 0;
 			margin-bottom: rem(40);
 			@include media-breakpoint-up(md) {
 				gap: rem(24);
-				grid-template-columns: repeat(auto-fit, rem(295));
+				// grid-template-columns: repeat(auto-fit, rem(295));
 			}
 			h3 {
 				margin-bottom: rem(2);
