@@ -136,6 +136,7 @@ aside {
 		bottom: 0;
 		width: 100%;
 		box-shadow: 0px -2px 27.7px 0px rgba(0, 0, 0, 0.11);
+		z-index: 100;
 	}
 	nav {
 		height: 100%;
@@ -167,7 +168,7 @@ aside {
 				flex-direction: column;
 				font-size: rem(12);
 				line-height: 1.4;
-				color: $body-color;
+				color: var(--aside-color, $body-color);
 				padding: rem(12.2) 0;
 				@include media-breakpoint-up(lg) {
 					@include block(93,94);
@@ -175,13 +176,13 @@ aside {
 					padding: 0;
 				}
 				&:hover {
-					background-color: $yellow-100;
+					background-color: var(--aside-bg-color,$yellow-100);
 					color: $primary;
 				}
 				.icon {
 					flex: 0 0 auto;
 					font-size: rem(20);
-					color: $primary;
+					color: var(--icon-color, $primary);
 					margin-bottom: rem(8);
 					fill: none;
 					stroke: currentColor;
@@ -649,14 +650,16 @@ h1, .h1 {
 }
 
 .badge {
+	background-image: none;
+	--bs-badge-color: var(--bs-badge-color-dark, $body-color);
 	&.bg-danger {
-		background-color: rgba(255, 188, 173, 0.30) !important;
+		background-color: var(--badge-bg-danger, rgba(255, 188, 173, 0.30)) !important;
 		.icon {
 			color: $danger;
 		}
 	}
 	&.bg-success {
-		background-color: #B7E7B6 !important;
+		background-color: var(--badge-bg-success,#B7E7B6) !important;
 		.icon {
 			color: $success;
 		}

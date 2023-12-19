@@ -62,7 +62,7 @@
 		font-size: rem(6.856);
 		line-height: normal;
 		border-radius: rem(8);
-		background: $body-color;
+		background-color: var(--logo-bg, $body-color);
 		color: $white;
 		width: rem(61);
 		height: rem(61);
@@ -106,6 +106,7 @@
 		margin-right: rem(10);
 		min-width: rem(37);
 		min-height: rem(37);
+		color: var(--initial-color, $body-color);
 	}
 	&__text {
 		max-width: rem(130);
@@ -172,14 +173,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		background-color: var(--panel-bg, #fff);
+		background-color: var(--stock-price-bg, #fff);
 		padding: rem(12);
 		border-radius: rem(8);
 		height: 100%;
 		@include media-breakpoint-up(md) {
 			flex-direction: row;
 			align-items: center;
-			background-color: $gray-100;
+			background-color: var(--stock-price-bg, $gray-100);
 			padding: rem(11) rem(12);
 			border-radius: rem(12);
 		}
@@ -212,6 +213,12 @@
 		font-size: rem(18);
 		line-height: 1.4;
 		margin-bottom: rem(8);
+		.text-danger {
+			color: var(--price-color-dark, rgba(var(--bs-danger-rgb),var(--bs-text-opacity)))!important;
+		}
+		.text-success {
+			color: var(--price-color-dark, rgba(var(--bs-success-rgb),var(--bs-text-opacity)))!important;
+		}
 		@include media-breakpoint-up(md) {
 			font-size: rem(14);
 			margin-bottom: 0;
