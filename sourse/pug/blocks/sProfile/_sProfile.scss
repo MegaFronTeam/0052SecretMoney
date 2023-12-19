@@ -69,7 +69,7 @@
 	&__edit {
 		padding: rem(16);
 		border-radius: rem(8);
-		background-color: $gray-200;
+		background-color: var(--bs-body-bg, $gray-200);
 		@include media-breakpoint-up(lg) {
 			border-radius: rem(16);
 			background-color: var(--panel-bg, #fff);
