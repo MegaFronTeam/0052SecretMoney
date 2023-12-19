@@ -39,10 +39,16 @@
 	h1, h2, h3, p {
 		margin-bottom: 0;
 	}
+	h3 {
+		color: $gray-900;
+	}
 	p.descr {
 		color: $gray-600;
 		font-size: rem(18);
 		line-height: 160%;
+	}
+	.btn-sm {
+		padding: $input-btn-padding-y $input-btn-padding-x;
 	}
 	.description {
 		display: grid;
@@ -58,7 +64,7 @@
 			gap: inherit;
 		}
 		h2 {
-			color: $gray-700;
+			color: var(--bs-heading-color);
 			font-size: rem(24);
 		}
 	}
@@ -98,12 +104,13 @@
 			}
 			p:last-child {
 				font-size: rem(24);
+				color: $gray-900;
 			}
 		}
 	}
 	.shopping {
 		h3 {
-			color: $gray-700;
+			color: var(--bs-heading-color);
 			font-weight: 400;
 		}
 		&__title-wrap {
@@ -127,6 +134,9 @@
 			background: $gray-100;
 			display: grid;
 			gap: rem(16);
+			p {
+				color: $gray-900;
+			}
 			.id {
 				display: flex;
 				justify-content: space-between;

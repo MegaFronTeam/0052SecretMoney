@@ -2,7 +2,6 @@
 	.sReferalProgram {
 		position: relative;
 		height: 100%;
-
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
@@ -56,10 +55,13 @@
 	}
 	img.bg {
 		position: absolute;
-		bottom: 0;
-		right: 0;
+		bottom: rem(-24);
+		right: rem(-24);
 		z-index: 0;
 		max-width: 100%;
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
 	}
 
 	&__slide{
