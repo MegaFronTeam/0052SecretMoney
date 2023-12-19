@@ -29,7 +29,7 @@
 		gap: rem(16);
 		margin: 0;
 		margin-bottom: rem(40);
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			gap: rem(24);
 			grid-template-columns: repeat(auto-fit, rem(295));
 		}
@@ -41,7 +41,6 @@
 			color: $dark;
 		}
 		&__card {
-			margin: 0;
 			.img-wrap {
 				aspect-ratio: 26 / 18;
 				position: relative;

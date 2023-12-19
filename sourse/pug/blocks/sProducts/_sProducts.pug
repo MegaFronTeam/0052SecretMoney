@@ -2,10 +2,10 @@ mixin sProducts()
 	// start sProducts
 	+b.SECTION.sProducts.section#sProducts&attributes(attributes)
 		h1 Продукты
-		.group
-			.group-head
+		+b.group
+			+e.head
 				h2 Действующие продукты
-			+b.products-group.row
+			+b.products-group
 				+e.A.card
 					.img-wrap
 						img(src="img/product-1.png", alt="Карточка продукта")
@@ -24,10 +24,10 @@ mixin sProducts()
 					h3 Tenet 1.0
 					p.under-title Действует до: 24.12.2023
 					p В целом, конечно, существующая теория развития. Являясь всего лишь вариацией текстового описания
-		.group
-			.group-head
+		+b.group
+			+e.head
 				h2 Остальные продукты
-			+b.products-group.row
+			+b.products-group
 				+e.A.card
 					.img-wrap
 						img(src="img/product-1.png", alt="Карточка продукта")
