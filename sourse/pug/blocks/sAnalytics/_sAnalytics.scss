@@ -1,0 +1,180 @@
+// start .sAnalytics
+.sAnalytics {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	--sTPB: #{rem(23.200)};
+	
+	.custom-select {
+		max-width: rem(275);
+		margin-bottom: rem(24);
+		display: none;
+		@include media-breakpoint-up(lg) {
+			display: block;
+		}
+	}
+	.tabs {
+		&__caption {
+			border-radius: rem(8);
+			background-color: $gray-200;
+			padding: rem(3);
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+			margin-bottom: rem(16);
+			@include media-breakpoint-up(lg) {
+				padding: rem(8);
+				border-radius: rem(12);
+				min-width: rem(250);
+				display: none;
+			}
+		}
+		&__btn {
+			@include mt;
+			padding: rem(6.600) rem(13);
+			text-align: center;
+			border-radius: rem(8);
+			width: 100%;
+			@include media-breakpoint-up(lg) {
+				padding: rem(9.600) rem(16);
+			}
+			&.active {
+				background-color: $white;
+				box-shadow: 0px 1px 1.4px 0px rgba(0, 0, 0, 0.25);
+			}
+		}
+		&__wrap {
+			@include media-breakpoint-up(lg) {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: rem(24);
+			}
+		}
+		&__content {
+			@include media-breakpoint-up(lg) {
+				display: block !important;
+				border-radius: rem(12);
+				border: 1px solid $gray-300;
+				&:nth-child(1) {
+					grid-column: 1/ span 1;
+					grid-row: 1 / span 2;
+				}
+				&:nth-child(2) {
+					grid-column: 2/ span 2;
+				}
+				&:nth-child(3) {
+					grid-column: 2/ span 2;
+				}
+			}	
+			.h3 {
+				display: none;
+				margin-bottom: 0;
+				@include media-breakpoint-up(lg) {
+					display: block;
+					padding: rem(16) rem(12) rem(12);
+				}
+			}
+		}
+	}
+	table {
+		width: 100%;
+		thead {
+			display: none;
+			@include media-breakpoint-up(lg) {
+				display: table-header-group;
+			}
+		}
+		tbody {
+			@include media-breakpoint-down(lg) {
+				tr {
+					display: flex;
+					flex-direction: column;
+					border: 1px solid var(--table-border-color, $gray-300);
+					padding: rem(7);
+					position: relative;
+					border-radius: rem(8);
+					row-gap: rem(12);
+					&:not(:last-child) {
+						margin-bottom: rem(8);
+					}
+					td {
+						display: flex;
+						align-items: center;
+					}
+				}
+			}
+		}
+		th {
+			padding: rem(12) rem(12) rem(10.600);
+			border-bottom: 1px solid var(--table-border-color, $gray-400);
+			color: var(--table-th-color, $gray-600);
+			font-size: rem(12);
+			line-height: 1.3;
+			font-weight: 400;
+		}
+		td {
+			@include media-breakpoint-up(lg) {
+				border-bottom: 1px solid var(--table-border-color, $gray-300);
+				padding: rem(7) rem(12);
+				min-height: rem(64);
+			}
+			.title {
+				display: block;
+				font-size: rem(12);
+				line-height: 1.3;
+				color: $gray-600;
+				margin-right: auto;
+				@include media-breakpoint-up(lg) {
+					display: none;
+				}
+			}
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		@include media-breakpoint-up(lg) {
+			flex-wrap: nowrap;
+		}
+		.h4 {
+			line-height: 1.3;
+			margin-bottom: rem(4);
+		}
+		p {
+			font-size: rem(11);
+			color: $gray-600;
+			font-family: $font-family-PTRootUI;
+			margin-bottom: 0;
+		}
+	}
+	&__img-wrap {
+		width: 100%;
+		max-width: rem(40);
+		flex: 0 0 auto;
+		margin-right: rem(16);
+		border-radius: rem(5);
+		overflow: hidden;
+		@include block(1,1);
+		img {
+			width: 100%;
+		}
+	}
+	&__price {
+		span {
+			color: var(--body-color-dark-secondary, $body-color);
+		}
+	}
+	&__subtext {
+		font-family: $font-family-PTRootUI;
+		font-size: rem(11);
+		line-height: 1.3;
+		color: $gray-600;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAnalytics

@@ -71,14 +71,47 @@ function eventHandler() {
 				var reader = new FileReader();
 				reader.onload = function(){ img.src = reader.result;}
 				reader.readAsDataURL(event.target.files[0]);
-	
-				// inputFile.files[0].name.length > 0 ? uploadavatar.classList.add('active') : uploadavatar.classList.remove('active');
 			});
-			// uploadavatar.querySelector('.upload-avatar__delete-photo').addEventListener('click', () => {
-			// 	img.src = '';
-			// 	uploadavatar.classList.remove('active');
-			// })
 		})
+	}
+
+	let customSelects = document.querySelectorAll('.custom-select--js');
+
+	if (customSelects.length > 0) {
+		customSelects.forEach((customSelect) => {
+			customSelect.addEventListener('click', () => {
+				customSelect.classList.toggle('active');
+			})
+		})
+
+		document.addEventListener('click', (event) => {
+			let customSelectTarget = event.target.closest('.custom-select--js');
+	
+			if(!customSelectTarget) {
+				customSelects.forEach((customSelect) => {
+					customSelect.classList.remove('active');
+				})
+			}
+		})
+	}
+
+	let mobileFilter = document.querySelector('.sDeal__filter-mobile');
+	if(mobileFilter) {
+		document.addEventListener('click', (event) => {
+			let mobileFilterBtnTarget = event.target.closest('.sDeal__filter-btn');
+			let mobileFilterTarget = event.target.closest('.sDeal__filter-mobile');
+			let mobileFilterCloseTarget = event.target.closest('.sDeal__filter-mobile .close');
+			let mobileFilterInnerBtnTarget = event.target.closest('.sDeal__filter-mobile .btn');
+	
+			if(!mobileFilterTarget || mobileFilterCloseTarget || mobileFilterInnerBtnTarget) {
+				mobileFilter.classList.remove('active');
+				document.body.classList.remove('fixed-filter');
+			}
+			if(mobileFilterBtnTarget) {
+				mobileFilter.classList.add('active');
+				document.body.classList.add('fixed-filter');
+			}
+		});
 	}
 
 };

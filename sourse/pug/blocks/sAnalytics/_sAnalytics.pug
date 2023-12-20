@@ -1,0 +1,48 @@
+mixin sAnalytics(data)
+	// start sAnalytics
+	+b.SECTION.sAnalytics.section#sAnalytics&attributes(attributes)
+		+b.section-title
+			h1 Аналитика
+		+customSelect
+		.tabs
+			.tabs__caption
+				.tabs__btn.active 1
+				.tabs__btn 2
+				.tabs__btn 3
+			.tabs__wrap
+				.tabs__content.active
+					.h3 Акции
+					table
+						thead
+							tr
+								th Название
+								th.text-lg-end Цена
+								th.text-lg-end Стоимость
+								th.text-lg-end Стоимость
+						tbody
+							mixin tr(img, title, text)
+								tr
+									td
+										+e.item
+											+e.img-wrap: +img(`img/${img}`, 'bg')
+											div
+												.h4!= title
+												p!= text
+									td.text-lg-end
+										span.title Цена
+										+e.price 347,05 #[span.text-secondary ₽] → #[span.text-success 380,05] #[span.text-secondary ₽]
+									td.text-lg-end 
+										span.title Стоимость
+										| 347,05 #[span.text-secondary ₽]
+										+e.subtext 1 шт
+									td.text-lg-end 
+										span.title Стоимость
+										+e.price 
+											| #[span.text-success +350,14] #[span.text-secondary ₽]
+											+e.subtext.text-success 0,06%
+							+tr('table-img-2.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-3.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-4.jpg', 'ИранНефть', 'MLTP')
+				.tabs__content 2
+				.tabs__content 3
+	// end sAnalytics

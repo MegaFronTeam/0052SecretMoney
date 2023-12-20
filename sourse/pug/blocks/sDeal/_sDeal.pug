@@ -1,4 +1,4 @@
-mixin sDeal(data)
+mixin sDeal(firstVersion)
 	// start sDeal
 	+b.SECTION.sDeal.section#sDeal&attributes(attributes)
 		+b.section-title
@@ -12,21 +12,125 @@ mixin sDeal(data)
 							span.d-none.d-md-inline Telegram
 							span.d-md-none Tg
 						+img('img/telegram.png')
+		if firstVersion
+			+e.filter
+				.row
+					.col-auto.d-none.d-lg-block
+						+customSelect
+					.col-auto
+						+e.radio-input-wrap
+							+in-c('radio', 'Все', 'sort')(checked)
+							+in-c('radio', 'По месяцам', 'sort')
+					.col-auto.ms-auto.d-xl-none
+						+e.filter-btn.active: +icon('filter')
+					+e.filter-col.col-auto.col-xl
+						+e.filter-mobile
+							.close: +iconC('close')
+							.title Фильтр
+							+input('Выберите', 'date', 'Период')
+							+input('Выберите', 'select', 'Тикер')
+							+input('Выберите', 'select', 'Тип')
+							.row
+								.col
+									.btn.btn-outline-dark.w-100(href='#') Сбросить
+								.col
+									.btn.btn-primary.w-100(href='#') Показать
+		else
+			+e.filter
+				.row
+					.col-auto.d-none.d-lg-block
+						+customSelect
+					.col-auto
+						+e.radio-input-wrap
+							+in-c('radio', 'Все', 'sort')(checked)
+							+in-c('radio', 'По месяцам', 'sort')
+								span.d-none.d-md-inline По месяцам
+								span.d-md-none По мес.
+					.col.col-lg-auto
+						+b.date
+							+e.BUTTON.btn: +icon('chevron-left')
+							.date-text Ноябрь 2023
+							+e.BUTTON.btn: +icon('chevron-right')
+		+e.sum
+			+e.sum-title Итого:
+			+e.sum-item
+				span Покупок
+				+e.num
+					span 1 124 856 
+					| ₽ 
+			+e.sum-item
+				span Продаж
+				+e.num 
+					span 1 124 856 
+					| ₽ 
 		table
-			tr
-				th Актив
-				th.text-lg-center Тип сделки
-				th.text-lg-center Дата
-				th.text-lg-end Стоимость
-				th.text-lg-end Кол-во, шт
-				th.text-lg-end Сумма
-			tr
-				td 
-				td.text-lg-center: .badge.bg-success Покупка
-				td.text-lg-center 11.12.2023 14:00
-				td.text-lg-end
-					+e.price #[span 347,05] ₽
-				td.text-lg-end 60
-				td.text-lg-end 
-					+e.price #[span.text-success 20 823,05] ₽
+			thead
+				tr
+					th Актив
+					th.text-lg-center Тип сделки
+					th.text-lg-center Дата
+					th.text-lg-end Стоимость
+					th.text-lg-end Кол-во, шт
+					th.text-lg-end Сумма
+			tbody
+				mixin tr(img, title, text, tags=[], priceClass='text-success')
+					tr
+						td
+							+e.item
+								+e.img-wrap: +img(`img/${img}`, 'bg')
+								div
+									.h4!= title
+									p!= text
+									if tags.length > 0
+										+e.tags.d-none.d-lg-block
+											.row
+												each tag in tags
+													.col-auto: +e.tag(style=`--tagBgColor: ${tag[1]}; --tagColor: ${tag[2]};`)!= tag[0]
+													//- .col-auto: +e.tag(style='--tagBgColor: #B6D4E7; --tagColor: #111B93;') IPO
+												//- .col-auto: +e.tag(style='--tagBgColor: #E2E2E2; --tagColor: #666;') Дополнительная покупка
+								if tags.length > 0
+									+e.tags.d-lg-none
+										.row
+											each tag in tags
+												.col-auto: +e.tag(style=`--tagBgColor: ${tag[1]}; --tagColor: ${tag[2]};`)!= tag[0]
+												//- .col-auto: +e.tag(style='--tagBgColor: #E2E2E2; --tagColor: #666;') Дополнительная покупка
+						td.text-lg-center 
+							block
+							
+						td.text-lg-center 
+							span.title Дата
+							| 11.12.2023 14:00
+						td.text-lg-end
+							span.title Стоимость
+							+e.price #[span 347,05] ₽
+						td.text-lg-end 
+							span.title Кол-во, шт
+							| 60
+						td.text-lg-end 
+							span.title Сумма
+							+e.price #[span(class=priceClass) 20 823,05] ₽
+				+tr('table-img-2.jpg', 'MTLRP', 'Мечел - Привилегированные акции', [['IPO', '#B6D4E7', '#111B93'], ['Дополнительная покупка', '#E2E2E2', '#666']])
+					.badge.bg-success Покупка
+				+tr('table-img-3.jpg', 'MTLRP', 'Интер РАО ЕЭС', '', 'text-danger')
+					.badge.bg-danger Продажа
+				+tr('table-img-4.jpg', 'RTKM', 'Ростелеком', [['Дополнительная покупка', '#E2E2E2', '#666']])
+					.badge.bg-accent Дивиденды
+				+tr('table-img-5.jpg', 'IRAO', 'Интер РАО ЕЭС', [['IPO', '#B6D4E7', '#111B93'], ['Дополнительная покупка', '#E2E2E2', '#666']])
+					.badge.bg-accent Купоны
+				+tr('table-img-6.jpg', 'MTLRP', 'Whoosh')
+					.badge.bg-success Покупка
+				+tr('table-img-7.jpg', 'MTLRP', 'Мечел - Привилегированные акции')
+					.badge.bg-success Покупка
+				+tr('table-img-2.jpg', 'MTLRP', 'Мечел - Привилегированные акции', [['IPO', '#B6D4E7', '#111B93'], ['Дополнительная покупка', '#E2E2E2', '#666']])
+					.badge.bg-success Покупка
+				+tr('table-img-3.jpg', 'MTLRP', 'Интер РАО ЕЭС', '', 'text-danger')
+					.badge.bg-danger Продажа
+				+tr('table-img-4.jpg', 'RTKM', 'Ростелеком', [['Дополнительная покупка', '#E2E2E2', '#666']])
+					.badge.bg-accent Дивиденды
+				+tr('table-img-5.jpg', 'IRAO', 'Интер РАО ЕЭС', [['IPO', '#B6D4E7', '#111B93'], ['Дополнительная покупка', '#E2E2E2', '#666']])
+					.badge.bg-accent Купоны
+				+tr('table-img-6.jpg', 'MTLRP', 'Whoosh')
+					.badge.bg-success Покупка
+				+tr('table-img-7.jpg', 'MTLRP', 'Мечел - Привилегированные акции')
+					.badge.bg-success Покупка
 	// end sDeal

@@ -50,3 +50,19 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin customSelect()
+	+b.custom-select--js
+		+e.head
+			p Дивидендный 40 000 ₽
+			span Открыт: 14 дек 2023
+		+e.dropdown
+			+e.dropdown-item
+				p Дивидендный 10 000 ₽
+				span Открыт: 4 дек 2023
+			+e.dropdown-item
+				p Дивидендный 20 000 ₽
+				span Открыт: 8 дек 2023
+			+e.dropdown-item
+				p Дивидендный 30 000 ₽
+				span Открыт: 12 дек 2023

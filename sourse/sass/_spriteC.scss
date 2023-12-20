@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.iconC-close {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(16 / #{$h} *1em );
+}
 .iconC-info {
 	$h: 18;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);

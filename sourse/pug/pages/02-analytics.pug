@@ -4,19 +4,19 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
-include ../blocks/sDeal/_sDeal.pug
+include ../blocks/sAnalytics/_sAnalytics.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= '01-deals.jpg'
 
 block title
-	- let  title= 'Сделки'
+	- let  title= 'Аналитика'
 	title= title
 block pagecontent
 
 	main.deals
-		+sDeal
+		+sAnalytics
 		
 		
 	//- +parts('footer')
