@@ -2,47 +2,49 @@ mixin sProducts()
 	// start sProducts
 	+b.SECTION.sProducts.section#sProducts&attributes(attributes)
 		h1 Продукты
-		.current-products
-			h2 Действующие продукты
-			+b.products-group.row
-				+e.A.card
-					.img-wrap
-						img(src="img/product-1.png", alt="Карточка продукта")
+		+b.group
+			+e.head
+				h2 Действующие продукты
+			+e.body
+				+b.A.card(href='#')
+					+e.img-wrap
+						img(src="img/product-1.png", alt="")
 					h3 Дивидендный 10К
-					p.under-title Действует до: 24.12.2023
+					+e.sub-title Действует до: 24.12.2023
 					p В целом, конечно, существующая теория развития. Являясь всего лишь вариацией текстового описания
-				+e.A.card
-					.img-wrap
-						img(src="img/product-3.png", alt="Карточка продукта")
+				+b.A.card(href='#')
+					+e.img-wrap
+						img(src="img/product-3.png", alt="")
 					h3 VIP Чаты
-					p.under-title Действует до: 24.12.2023
+					+e.sub-title Действует до: 24.12.2023
 					p В целом, конечно, существующая теория развития. Являясь всего лишь вариацией текстового описания
-				+e.A.card
-					.img-wrap
-						img(src="img/product-2.png", alt="Карточка продукта")
+				+b.A.card(href='#')
+					+e.img-wrap
+						img(src="img/product-2.png", alt="")
 					h3 Tenet 1.0
-					p.under-title Действует до: 24.12.2023
+					+e.sub-title Действует до: 24.12.2023
 					p В целом, конечно, существующая теория развития. Являясь всего лишь вариацией текстового описания
-		.other-products
-			h2 Остальные продукты
-			+b.products-group.row
-				+e.A.card
-					.img-wrap
-						img(src="img/product-1.png", alt="Карточка продукта")
+		+b.group
+			+e.head
+				h2 Остальные продукты
+			+e.body
+				+b.A.card(href='#')
+					+e.img-wrap
+						img(src="img/product-1.png", alt="")
 					h3 Дивидендный 10К
-					p.under-title Действует до: 24.12.2023
+					+e.sub-title Действует до: 24.12.2023
 					p В целом, конечно, существующая теория развития. Являясь всего лишь вариацией текстового описания
-				+e.A.card
-					.img-wrap
-						img(src="img/product-2.png", alt="Карточка продукта")
+				+b.A.card(href='#')
+					+e.img-wrap
+						img(src="img/product-2.png", alt="")
 					h3 Tenet 1.0
-					p.under-title Действует до: 24.12.2023
+					+e.sub-title Действует до: 24.12.2023
 					p В целом, конечно, существующая теория развития. Являясь всего лишь вариацией текстового описания
-				+e.A.card
-					.img-wrap
-						img(src="img/product-3.png", alt="Карточка продукта")
+				+b.A.card(href='#')
+					+e.img-wrap
+						img(src="img/product-3.png", alt="")
 					h3 VIP Чаты
-					p.under-title Действует до: 24.12.2023
+					+e.sub-title Действует до: 24.12.2023
 					p В целом, конечно, существующая теория развития. Являясь всего лишь вариацией текстового описания
 
 	// end sProducts
