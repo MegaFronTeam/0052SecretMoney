@@ -81,14 +81,18 @@
 
 .search-block{
 	position: relative;
+
 	input{
-		font-size: 14px;
+		font-size: rem(14);
 		width: 100%;
-		border: none !important;
 		outline: none !important;
-		padding-left: rem(30);
-		padding-top: rem(14);
-		padding-bottom: rem(14);
+		line-height: 1.3;
+		padding: rem(9) rem(12) rem(9) rem(42);
+		border-radius: rem(8);
+		border: 1px solid var(--table-border-color, #{$gray-300});
+		&::placeholder {
+			color: $gray-500;
+		}
 	}
 	.icon{
 		font-size: rem(20);
@@ -96,7 +100,7 @@
 	}
 	button{
 		position: absolute;
-		left: 0;
+		left: rem(8);
 		top: 0;
 		height: 100%;
 		display: flex;
@@ -104,6 +108,14 @@
 		align-items: center;
 		background: none !important;
 		border: none !important;
+		@include media-breakpoint-up(lg) {
+			left: rem(8);
+		}
+		.icon {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: rem(2);
+		}
 	}
 }
 

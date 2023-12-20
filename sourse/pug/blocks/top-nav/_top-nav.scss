@@ -134,7 +134,7 @@
 	&__log-out {
 		flex: 0 0 auto;
 		margin-left: auto;
-		color: $black;
+		color: var(--body-color-dark, #{$black});
 		&:hover {
 			color: $danger;
 		}

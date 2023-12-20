@@ -1,0 +1,96 @@
+mixin sReferalProgramTable(data)
+	// start sReferalProgramTable
+	+b.SECTION.sReferalProgramTable.section#sReferalProgramTable&attributes(attributes)
+		+b.section-title
+			h1 Реферальная программа
+		.tabs
+			.tabs__caption
+				.tabs__btn.active Ссылки
+				.tabs__btn Финансы
+				.tabs__btn Отрасли
+			.tabs__wrap
+				.tabs__content.active
+					+search
+					+e.table-wrap
+						table
+							thead
+								tr
+									th Название
+									th Теги
+									th Ссылка для друга
+									th Тип
+									th Предложение
+							tbody
+								mixin tr(tag)
+									tr
+										td Дивидендный портфель 10К
+										td
+											if tag
+												span Тег1,
+												span Тег2,
+												span Тег3,
+												a(href="#").d-none.d-lg-inline &nbsp;еще 3
+											else 
+												| Нет
+										td 
+											+e.link 
+												+e.copy: +icon('copy')
+												a(href="#") https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 
+										td 
+											.title Тип
+											| Оплата
+										td 
+											.title Предложение
+											| Дивидендный портфель 10К
+								+tr()
+								+tr(true)
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+								+tr()
+				.tabs__content
+					.h3 Финансы
+					+e.simple-table
+						table
+							tr
+								td Сумма комиссий партнера
+								td #[span 458 988] &nbsp;₽
+							tr
+								td Сумма комиссий учителя
+								td #[span 11 220] &nbsp;₽
+							tr
+								td Выплачено
+								td #[span 325 586] &nbsp;₽
+							tr
+								td Осталось выплатить
+								td #[span 0] &nbsp;₽
+				.tabs__content
+					+e.tabs-row.row
+						.col
+							.h3 Заказы
+						.col-auto
+							+e.caption от собственных рефералов
+					+e.simple-table
+						table
+							tr
+								td Всего заказов
+								td #[span 13]
+							tr
+								td Сумма заказов
+								td #[span 252 585] &nbsp;₽
+							tr
+								td Оплачено заказов
+								td #[span 8]
+							tr
+								td Сумма оплат по заказам
+								td #[span 174 458] &nbsp;₽
+	// end sReferalProgramTable

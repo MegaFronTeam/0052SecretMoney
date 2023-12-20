@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Реферальная программа</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/ui/fancybox/fancybox.css" rel="stylesheet"/>
+		<link href="css/custom-bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script src="js/setTheme.js" defer="defer"></script>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page" data-bg="main.jpg">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<div class="main-center-wrap">
+				<aside class="aside" id="aside">
+					<nav>
+						<ul> 
+							<li><a href="#"> 
+									<svg class="icon icon-banknote ">
+										<use xlink:href="img/svg/sprite.svg#banknote"></use>
+									</svg>Сделки </a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-bar-chart-big ">
+										<use xlink:href="img/svg/sprite.svg#bar-chart-big"></use>
+									</svg>Аналитика</a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-briefcase ">
+										<use xlink:href="img/svg/sprite.svg#briefcase"></use>
+									</svg>Продукты</a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-key-square ">
+										<use xlink:href="img/svg/sprite.svg#key-square"></use>
+									</svg><span class="d-none d-lg-inline">Реферальная программа</span><span class="d-lg-none">Реф. прог.</span></a></li>
+							<li><a href="#"> 
+									<svg class="icon icon-help-circle ">
+										<use xlink:href="img/svg/sprite.svg#help-circle"></use>
+									</svg><span class="d-none d-lg-inline">Поддержка</span><span class="d-lg-none">Поддер.</span></a></li>
+						</ul>
+					</nav>
+				</aside>
+				<main>
+					<!-- start sReferalProgramTable-->
+					<section class="sReferalProgramTable section" id="sReferalProgramTable">
+						<div class="section-title">
+							<h1>Реферальная программа</h1>
+						</div>
+						<div class="tabs">
+							<div class="tabs__caption">
+								<div class="tabs__btn active">Ссылки</div>
+								<div class="tabs__btn">Финансы</div>
+								<div class="tabs__btn">Отрасли</div>
+							</div>
+							<div class="tabs__wrap">
+								<div class="tabs__content active">
+									<div class="search-block">
+										<form>
+											<button> 
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+											</button>
+											<input type="text" placeholder="Теги" inputmode="search"/>
+										</form>
+									</div>
+									<div class="sReferalProgramTable__table-wrap">
+										<table>
+											<thead>
+												<tr>
+													<th>Название</th>
+													<th>Теги</th>
+													<th>Ссылка для друга</th>
+													<th>Тип</th>
+													<th>Предложение</th>
+												</tr>
+											</thead>
+											<tbody>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td><span>Тег1,</span><span>Тег2,</span><span>Тег3,</span><a class="d-none d-lg-inline" href="#">&nbsp;еще 3</a>
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+														<tr>
+															<td>Дивидендный портфель 10К</td>
+															<td>Нет
+															</td>
+															<td> 
+																<div class="sReferalProgramTable__link"> 
+																	<div class="sReferalProgramTable__copy">
+																		<svg class="icon icon-copy ">
+																			<use xlink:href="img/svg/sprite.svg#copy"></use>
+																		</svg>
+																	</div><a href="#">https://www.figma.com/file/9JVHVtdRcy1UWkoJvMUMlc/Admin_panel-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9-%D0%9B%D0%B8%D0%BD%D0%B3%D0%B5%D1%86%D0%BA%D0%B8%D0%B9?type=design&node-id=3461-5668&mode=design&t=i0FrMXElFR7ipBuW-4 </a>
+																</div>
+															</td>
+															<td> 
+																<div class="title">Тип</div>Оплата
+															</td>
+															<td> 
+																<div class="title">Предложение</div>Дивидендный портфель 10К
+															</td>
+														</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div class="h3">Финансы</div>
+									<div class="sReferalProgramTable__simple-table">
+										<table>
+											<tr>
+												<td>Сумма комиссий партнера</td>
+												<td><span>458 988</span> &nbsp;₽</td>
+											</tr>
+											<tr>
+												<td>Сумма комиссий учителя</td>
+												<td><span>11 220</span> &nbsp;₽</td>
+											</tr>
+											<tr>
+												<td>Выплачено</td>
+												<td><span>325 586</span> &nbsp;₽</td>
+											</tr>
+											<tr>
+												<td>Осталось выплатить</td>
+												<td><span>0</span> &nbsp;₽</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+								<div class="tabs__content">
+									<div class="sReferalProgramTable__tabs-row row">
+										<div class="col">
+											<div class="h3">Заказы</div>
+										</div>
+										<div class="col-auto">
+											<div class="sReferalProgramTable__caption">от собственных рефералов
+											</div>
+										</div>
+									</div>
+									<div class="sReferalProgramTable__simple-table">
+										<table>
+											<tr>
+												<td>Всего заказов</td>
+												<td><span>13</span></td>
+											</tr>
+											<tr>
+												<td>Сумма заказов</td>
+												<td><span>252 585</span> &nbsp;₽</td>
+											</tr>
+											<tr>
+												<td>Оплачено заказов</td>
+												<td><span>8</span></td>
+											</tr>
+											<tr>
+												<td>Сумма оплат по заказам</td>
+												<td><span>174 458</span> &nbsp;₽</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- end sReferalProgramTable-->
+				</main>
+			</div>
+		</div>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/chart.js/chart.umd.js"> </script>
+		<script src="libs/hc-sticky/hc-sticky.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

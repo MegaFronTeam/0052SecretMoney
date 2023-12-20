@@ -131,20 +131,32 @@ function eventHandler() {
 		chartDoughnutJsArr.forEach((chartDoughnutJs) => {
 			const data = {
 				labels: [
-					'Red',
-					'Blue',
-					'Yellow'
+					'Whoosh',
+					'ИранНефть',
+					'Ростелеком',
+					'Белуга',
+					'Компания',
+					'МТС',
+					'Газпромбанк'
 				],
+				// labels: chartDoughnutJs.dataset.labels,
 				datasets: [{
-					label: 'My First Dataset',
-					data: [300, 50, 100],
+					// label: 'My First Dataset',
+					data: [300, 200, 50, 20, 30, 100, 150],
 					backgroundColor: [
-						'rgb(255, 99, 132)',
-						'rgb(54, 162, 235)',
-						'rgb(255, 205, 86)'
+						'#A2E48A',
+						'#72AAFF',
+						'#F43ECC',
+						'#7DF9BD',
+						'#0D6CA1',
+						'#7DF9BD',
+						'#F97D7D'
 					],
 					hoverOffset: 4,
 				}],
+				options: {
+					borderWidth: '12px',
+				}
 			};
 			
 			new Chart(chartDoughnutJs, {

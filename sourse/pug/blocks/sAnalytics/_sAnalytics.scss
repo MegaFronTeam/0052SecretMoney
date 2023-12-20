@@ -15,7 +15,7 @@
 	.tabs {
 		&__caption {
 			border-radius: rem(8);
-			background-color: var(--switcher-bg, $gray-200);
+			background-color: var(--switcher-bg, #{$gray-200});
 			padding: rem(3);
 			display: flex;
 			align-items: center;
@@ -54,11 +54,12 @@
 			@include media-breakpoint-up(lg) {
 				display: block !important;
 				border-radius: rem(12);
-				border: 1px solid var(--table-border-color, $gray-300);
+				border: 1px solid var(--table-border-color, #{$gray-300});
 				&:nth-child(1) {
 					grid-column: 1/ span 1;
 					grid-row: 1 / span 2;
 					max-height: calc(100vh - rem(334));
+					min-height: 100%;
     			overflow: auto;
 				}
 				&:nth-child(2) {
@@ -91,7 +92,7 @@
 				tr {
 					display: flex;
 					flex-direction: column;
-					border: 1px solid var(--table-border-color, $gray-300);
+					border: 1px solid var(--table-border-color, #{$gray-300});
 					padding: rem(7);
 					position: relative;
 					border-radius: rem(8);
@@ -108,7 +109,7 @@
 		}
 		th {
 			padding: rem(12) rem(12) rem(10.600);
-			border-bottom: 1px solid var(--table-border-color, $gray-400);
+			border-bottom: 1px solid var(--table-border-color, #{$gray-400});
 			color: var(--table-th-color, $gray-600);
 			font-size: rem(12);
 			line-height: 1.3;
@@ -116,7 +117,7 @@
 		}
 		td {
 			@include media-breakpoint-up(lg) {
-				border-bottom: 1px solid var(--table-border-color, $gray-300);
+				border-bottom: 1px solid var(--table-border-color, #{$gray-300});
 				padding: rem(7) rem(12);
 				min-height: rem(64);
 			}
@@ -169,7 +170,7 @@
 			align-items: center;
 		}
 		span {
-			color: var(--body-color-dark-secondary, $body-color);
+			color: var(--body-color-dark-secondary, #{$body-color});
 		}
 	}
 	&__subtext {

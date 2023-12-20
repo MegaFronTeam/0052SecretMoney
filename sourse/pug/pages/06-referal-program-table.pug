@@ -1,0 +1,25 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sReferalProgramTable/_sReferalProgramTable.pug
+
+block variables
+	- let  mainPage= 'main-page'
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Реферальная программа'
+	title= title
+block pagecontent
+
+	main
+		+sReferalProgramTable
+
+	//- +parts('footer')
+      
+
+
+

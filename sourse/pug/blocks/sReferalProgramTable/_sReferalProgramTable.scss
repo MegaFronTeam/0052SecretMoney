@@ -1,0 +1,286 @@
+// start .sReferalProgramTable
+.sReferalProgramTable {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	.tabs {
+		&__caption {
+			border-radius: rem(8);
+			background-color: var(--switcher-bg, #{$gray-200});
+			padding: rem(3);
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+			margin-bottom: rem(16);
+			@include media-breakpoint-up(lg) {
+				padding: rem(8);
+				border-radius: rem(12);
+				min-width: rem(250);
+				display: none;
+			}
+		}
+		&__btn {
+			@include mt;
+			padding: rem(6.600) rem(13);
+			text-align: center;
+			border-radius: rem(8);
+			width: 100%;
+			color: var(--switcher-btn-color, #{$body-color});
+			@include media-breakpoint-up(lg) {
+				padding: rem(9.600) rem(16);
+			}
+			&.active {
+				background-color: var(--switcher-btn-active-bg, #{$white});
+				box-shadow: 0px 1px 1.4px 0px var(--switcher-btn-active-shadow, rgba(0, 0, 0, 0.25));
+			}
+		}
+		&__wrap {
+			@include media-breakpoint-up(lg) {
+				display: grid;
+				grid-template-columns: repeat(12, 1fr);
+				grid-template-rows: max-content;
+				gap: rem(16);
+			}
+		}
+		&__content {
+			@include media-breakpoint-up(lg) {
+				display: block !important;
+				border-radius: rem(12);
+				border: 1px solid var(--table-border-color, #{$gray-300});
+				&:nth-child(1) {
+					grid-column: 1/ span 8;
+					grid-row: 1 / span 2;
+					max-height: calc(100vh - rem(270));
+					min-height: 100%;
+    			overflow: auto;
+					width: 100%;
+					max-width: rem(739);
+				}
+				&:nth-child(2) {
+					grid-column: 9/ span 12;
+					max-width: rem(398);
+					margin-left: auto;
+					width: 100%;
+					align-self: self-end;
+				}
+				&:nth-child(3) {
+					grid-column: 9/ span 12;
+					max-width: rem(398);
+					margin-left: auto;
+					width: 100%;
+				}
+			}	
+			.h3 {
+				display: none;
+				margin-bottom: 0;
+				@include media-breakpoint-up(lg) {
+					display: block;
+					padding: rem(16) rem(12) rem(12);
+				}
+			}
+		}
+	}
+	&__tabs-row{ 
+		align-items: center;
+		display: none;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+		}
+	}
+	&__table-wrap {
+
+		table {
+			width: 100%;
+			thead {
+				display: none;
+				@include media-breakpoint-up(lg) {
+					display: table-header-group;
+				}
+			}
+			tbody {
+				@include media-breakpoint-up(lg) {
+					tr {
+						&:last-child {
+							td {
+								border: none;
+							}
+						}
+					}
+				}
+				@include media-breakpoint-down(lg) {
+					tr {
+						display: flex;
+						flex-direction: column;
+						border: 1px solid var(--table-border-color, #{$gray-300});
+						padding: rem(7);
+						position: relative;
+						border-radius: rem(8);
+						&:not(:last-child) {
+							margin-bottom: rem(8);
+						}
+						td {
+							display: flex;
+							align-items: center;
+							&:nth-child(2) {
+								margin-bottom: rem(8);
+							}
+							&:nth-child(3) {
+								order: 5;
+							}
+							&:nth-child(4) {
+								margin-bottom: rem(4);
+							}
+							&:nth-child(5) {
+								margin-bottom: rem(8);
+							}
+						}
+					}
+				}
+			}
+			th {
+				padding: rem(12) rem(6) rem(10.600);
+				border-bottom: 1px solid var(--table-border-color, #{$gray-400});
+				color: var(--table-th-color, #{$gray-600});
+				font-size: rem(12);
+				line-height: 1.3;
+				font-weight: 400;
+				&:nth-child(1) {
+					width: 18.6%;
+					padding-left: rem(12);
+				}
+				&:nth-child(2) {
+					width: 27%;
+				}
+				&:nth-child(4) {
+					width: 14.3%;
+				}
+				&:nth-child(5) {
+					width: 25.8%;
+					padding-right: rem(12);
+				}
+			}
+			td {
+				&:not(:first-child) {
+					color: var(--body-color-dark-secondary, #{$gray-700});
+					font-size: rem(12);
+					font-family: $font-family-monospace;
+				}
+				@include media-breakpoint-up(lg) {
+					border-bottom: 1px solid var(--table-border-color, #{$gray-300});
+					padding: rem(7) rem(6);
+					min-height: rem(64);
+					&:first-child {
+						padding-left: rem(12);
+					}
+					&:last-child {
+						padding-right: rem(12);
+					}
+				}
+				.title {
+					display: block;
+					font-size: rem(12);
+					line-height: 1.3;
+					color: $gray-600;
+					margin-right: auto;
+					@include media-breakpoint-up(lg) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		// @include ellips;
+		// @include media-breakpoint-up(lg) {
+		// 	max-width: rem(170);
+		// }
+		@include media-breakpoint-down(lg) {
+			padding: rem(8);
+			border-radius: rem(8);
+			background-color: $gray-200;
+			flex-direction: row-reverse;
+		}
+		a {
+			@include ellips;
+			max-width: calc(100vw - rem(130));
+			line-height: 1.4;
+			@include media-breakpoint-up(lg) {
+				max-width: rem(170);
+			}
+			&:not(:hover) {
+				color: var(--body-color-dark-secondary, #{$gray-700});
+			}
+		}
+	}
+	&__copy {
+		flex: 0 0 auto;
+		width: rem(24);
+		height: rem(24);
+		border-radius: rem(4);
+		background: $gray-200;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-left: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin-right: rem(16);
+			margin-left: 0;
+		}
+		.icon {
+			font-size: rem(16);
+			color: $primary;
+			fill: none;
+			stroke: currentColor;
+			stroke-width: rem(2);
+		}
+	}
+	&__simple-table {
+		table {
+			width: 100%;
+			td {
+				padding: rem(14) rem(8);
+				border-top: 1px solid var(--table-border-color, #{$gray-300});
+				&:nth-child(1) {
+					padding-left: rem(16);
+					font-family: $font-family-monospace;
+					font-size: rem(12);
+					line-height: 1.4;
+					color: var(--body-color-dark-secondary, #{$gray-600});
+				}
+				&:nth-child(2) {
+					padding-right: rem(16);
+					text-align: right;
+					color: $gray-600;
+					span {
+						color: var(--body-color-dark-secondary, #{$body-color});
+					}
+				}
+			}
+		}
+	}
+	&__caption {
+		color: $gray-600;
+		color: var(--body-color-dark-secondary,#{$gray-600});
+		font-family: $font-family-monospace;
+		font-size: rem(12);
+		line-height: 1.4;
+		padding-right: rem(12);
+	}
+	.search-block{
+		position: relative;
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(lg) {
+			margin: rem(12);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sReferalProgramTable
