@@ -200,7 +200,7 @@
 		@include media-breakpoint-down(lg) {
 			padding: rem(8);
 			border-radius: rem(8);
-			background-color: $gray-200;
+			background-color: var(--offer-continue-bg, #{$gray-200});
 			flex-direction: row-reverse;
 		}
 		a {
