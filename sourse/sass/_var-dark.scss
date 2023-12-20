@@ -80,6 +80,7 @@ $accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://
   --stock-price-bg: #{$gray-800};
   --badge-bg-danger: rgba(255, 188, 173, 0.10);
   --badge-bg-success: rgba(183, 231, 182, 0.10);
+  --badge-bg-accent: rgba(215, 226, 255, 0.10);
   --bs-badge-color-dark: #{$body-color-dark};
   --price-color-dark: #DBDEEB;
 
@@ -92,7 +93,21 @@ $accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://
   --table-th-color: #DBDEEB;
   --table-border-color: #525B7A;
   --offer-continue-bg :#1B1A1D;
+  --gray-200: #292c38;
+  --switcher-bg: #43485A;
+  --switcher-btn-active-bg: #1B1A1D;
+  --switcher-btn-color: #E8EAF2;
+  --switcher-btn-active-shadow: rgba(0, 0, 0, 0.25);
+  --input-title: #a7acbe;
+
+  --select-chevron: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.58709 7.46209C5.9532 7.09597 6.5468 7.09597 6.91291 7.46209L10 10.5492L13.0871 7.46209C13.4532 7.09597 14.0468 7.09597 14.4129 7.46209C14.779 7.8282 14.779 8.4218 14.4129 8.78791L10 13.2008L5.58709 8.78791C5.22097 8.4218 5.22097 7.8282 5.58709 7.46209Z' fill='%23E8EAF2'/%3E%3C/svg%3E%0A");
+  --calendar: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.1663 3.33331H4.49967C3.5792 3.33331 2.83301 4.07951 2.83301 4.99998V16.6666C2.83301 17.5871 3.5792 18.3333 4.49967 18.3333H16.1663C17.0868 18.3333 17.833 17.5871 17.833 16.6666V4.99998C17.833 4.07951 17.0868 3.33331 16.1663 3.33331Z' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.666 1.66669V5.00002' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7 1.66669V5.00002' stroke='%23ffffff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.83301 8.33331H17.833' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
   @media (min-width: 768px) {
     --stock-price-bg: #{$gray-900};
+  }
+  &:root {
+    --bs-success-rgb: 108, 212, 162;
+    --bs-danger-rgb: 205, 115, 131;
+    --bs-accent-rgb: 153, 160, 246;
   }
 }

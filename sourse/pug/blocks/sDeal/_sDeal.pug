@@ -1,68 +1,76 @@
 mixin sDeal(firstVersion)
 	// start sDeal
 	+b.SECTION.sDeal.section#sDeal&attributes(attributes)
-		+b.section-title
-			.row
-				.col-md-auto
-					h1 Сделки
-				.col-md
-					+e.bot
-						p Бот для получения уведомлений о сделках: #[a(href="https://t.me/pensionny40bot" target='_blank') @pensionny40bot]
-						+e.btn(href='#') Перейти в 
-							span.d-none.d-md-inline Telegram
-							span.d-md-none Tg
-						+img('img/telegram.png')
-		if firstVersion
-			+e.filter
+		+e.deal-sticky--js
+			+b.section-title
 				.row
-					.col-auto.d-none.d-lg-block
-						+customSelect
-					.col-auto
-						+e.radio-input-wrap
-							+in-c('radio', 'Все', 'sort')(checked)
-							+in-c('radio', 'По месяцам', 'sort')
-					.col-auto.ms-auto.d-xl-none
-						+e.filter-btn.active: +icon('filter')
-					+e.filter-col.col-auto.col-xl
-						+e.filter-mobile
-							.close: +iconC('close')
-							.title Фильтр
-							+input('Выберите', 'date', 'Период')
-							+input('Выберите', 'select', 'Тикер')
-							+input('Выберите', 'select', 'Тип')
-							.row
-								.col
-									.btn.btn-outline-dark.w-100(href='#') Сбросить
-								.col
-									.btn.btn-primary.w-100(href='#') Показать
-		else
-			+e.filter
-				.row
-					.col-auto.d-none.d-lg-block
-						+customSelect
-					.col-auto
-						+e.radio-input-wrap
-							+in-c('radio', 'Все', 'sort')(checked)
-							+in-c('radio', 'По месяцам', 'sort')
-								span.d-none.d-md-inline По месяцам
-								span.d-md-none По мес.
-					.col.col-lg-auto
-						+b.date
-							+e.BUTTON.btn: +icon('chevron-left')
-							.date-text Ноябрь 2023
-							+e.BUTTON.btn: +icon('chevron-right')
-		+e.sum
-			+e.sum-title Итого:
-			+e.sum-item
-				span Покупок
-				+e.num
-					span 1 124 856 
-					| ₽ 
-			+e.sum-item
-				span Продаж
-				+e.num 
-					span 1 124 856 
-					| ₽ 
+					.col-md-auto
+						h1 Сделки
+					+e.col.col-md
+						if firstVersion
+							+e.bot--added
+								p Бот подключен
+								+e.btn(href='#') Перейти в 
+									span.d-none.d-md-inline Telegram
+									span.d-md-none Tg
+						else 
+							+e.bot
+								p Бот для получения уведомлений о сделках: #[a(href="https://t.me/pensionny40bot" target='_blank') @pensionny40bot]
+								+e.btn(href='#') Перейти в 
+									span.d-none.d-md-inline Telegram
+									span.d-md-none Tg
+								+img('img/telegram.png')
+			if firstVersion
+				+e.filter
+					.row
+						.col-auto.d-none.d-lg-block
+							+customSelect
+						.col-auto
+							+e.radio-input-wrap
+								+in-c('radio', 'Все', 'sort')(checked)
+								+in-c('radio', 'По месяцам', 'sort')
+						.col-auto.ms-auto.d-xl-none
+							+e.filter-btn.active: +icon('filter')
+						+e.filter-col.col-auto.col-xl
+							+e.filter-mobile
+								.close: +iconC('close')
+								.title Фильтр
+								+input('Выберите', 'date', 'Период')
+								+input('Выберите', 'select', 'Тикер')
+								+input('Выберите', 'select', 'Тип')
+								.row
+									.col
+										.btn.btn-outline-dark.w-100(href='#') Сбросить
+									.col
+										.btn.btn-primary.w-100(href='#') Показать
+			else
+				+e.filter
+					.row
+						.col-auto.d-none.d-lg-block
+							+customSelect
+						.col-auto
+							+e.radio-input-wrap
+								+in-c('radio', 'Все', 'sort')(checked)
+								+in-c('radio', 'По месяцам', 'sort')
+									span.d-none.d-md-inline По месяцам
+									span.d-md-none По мес.
+						.col.col-lg-auto
+							+b.date
+								+e.BUTTON.btn: +icon('chevron-left')
+								.date-text Ноябрь 2023
+								+e.BUTTON.btn: +icon('chevron-right')
+			+e.sum
+				+e.sum-title Итого:
+				+e.sum-item
+					span Покупок
+					+e.num
+						span 1 124 856 
+						| ₽ 
+				+e.sum-item
+					span Продаж
+					+e.num 
+						span 1 124 856 
+						| ₽ 
 		table
 			thead
 				tr

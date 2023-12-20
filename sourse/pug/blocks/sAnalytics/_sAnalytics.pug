@@ -6,9 +6,9 @@ mixin sAnalytics(data)
 		+customSelect
 		.tabs
 			.tabs__caption
-				.tabs__btn.active 1
-				.tabs__btn 2
-				.tabs__btn 3
+				.tabs__btn.active Акции
+				.tabs__btn Компании
+				.tabs__btn Отрасли
 			.tabs__wrap
 				.tabs__content.active
 					.h3 Акции
@@ -30,19 +30,56 @@ mixin sAnalytics(data)
 												p!= text
 									td.text-lg-end
 										span.title Цена
-										+e.price 347,05 #[span.text-secondary ₽] → #[span.text-success 380,05] #[span.text-secondary ₽]
+										+e.price #[span 347,05] &nbsp;₽ →&nbsp; #[span.text-success  380,05] &nbsp;₽
 									td.text-lg-end 
 										span.title Стоимость
-										| 347,05 #[span.text-secondary ₽]
-										+e.subtext 1 шт
+										+e.price
+											| #[span 347,05] &nbsp;₽
+											+e.subtext 1 шт
 									td.text-lg-end 
 										span.title Стоимость
 										+e.price 
-											| #[span.text-success +350,14] #[span.text-secondary ₽]
+											| #[span.text-success +350,14] &nbsp;₽
 											+e.subtext.text-success 0,06%
 							+tr('table-img-2.jpg', 'Whoosh', 'MLTP')
 							+tr('table-img-3.jpg', 'Whoosh', 'MLTP')
 							+tr('table-img-4.jpg', 'ИранНефть', 'MLTP')
-				.tabs__content 2
-				.tabs__content 3
+							tr
+								td
+									+e.item
+										+e.img-wrap: +img(`img/table-img-3.jpg`, 'bg')
+										div
+											.h4 Whoosh
+											p MLTP
+								td.text-lg-end
+									span.title Цена
+									+e.price #[span 11 580,05] &nbsp;₽ →&nbsp; #[span.text-danger 10 380,05] &nbsp;₽
+								td.text-lg-end 
+									span.title Стоимость
+									+e.price
+										| #[span 5 347,05] &nbsp;₽
+										+e.subtext 1 шт
+								td.text-lg-end 
+									span.title Стоимость
+									+e.price 
+										| #[span.text-danger -1 350,14] &nbsp;₽
+										+e.subtext.text-danger 0,06%
+							+tr('table-img-2.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-3.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-4.jpg', 'ИранНефть', 'MLTP')
+							+tr('table-img-2.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-3.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-4.jpg', 'ИранНефть', 'MLTP')
+							+tr('table-img-2.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-3.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-4.jpg', 'ИранНефть', 'MLTP')
+							+tr('table-img-2.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-3.jpg', 'Whoosh', 'MLTP')
+							+tr('table-img-4.jpg', 'ИранНефть', 'MLTP')
+				.tabs__content
+					.h3 Компании
+					//- canvas.chart-doughnut-js
+				.tabs__content
+					.h3 Отрасли
+					//- canvas.chart-doughnut-js
 	// end sAnalytics

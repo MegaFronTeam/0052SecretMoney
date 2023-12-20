@@ -657,7 +657,7 @@ h1, .h1 {
 
 .badge {
 	background-image: none;
-	--bs-badge-color: var(--bs-badge-color-dark, $body-color);
+	--bs-badge-color: var(--bs-badge-color-dark, #{$body-color});
 	&.bg-danger {
 		background-color: var(--badge-bg-danger, rgba(255, 188, 173, 0.30)) !important;
 		.icon {
