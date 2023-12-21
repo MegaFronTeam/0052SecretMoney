@@ -183,6 +183,98 @@
 			margin-right: rem(4);
 		}
 	}
+	&__chart-doughnut-wrap {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: rem(12) rem(24) rem(24) rem(24);
+		gap: rem(40);
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+		}
+		@include media-breakpoint-up(lg) {
+			gap: rem(16);
+		}
+		@include media-breakpoint-up(xl) {
+			gap: rem(40);
+		}
+		#legend-container {
+			flex-grow: 1;
+			width: 100%;
+			@include media-breakpoint-up(md) {
+			}
+			ul {
+				display: flex;
+				flex-direction: column;
+				margin: 0px;
+				padding: 0px;
+				list-style-type: none;
+				li {
+					align-items: center;
+					cursor: pointer;
+					display: flex;
+					flex-direction: row;
+					&:not(:last-child) {
+						margin-bottom: rem(4);
+					}
+					& > span {
+						border-width: 0px;
+						display: inline-block;
+						flex-shrink: 0;
+						height: rem(6);
+						margin-right: rem(8);
+						width: rem(6);
+						border-radius: 50%;
+						flex: 0 0 auto;
+					}
+					p {
+						
+						display: flex;
+						width: 100%;
+						font-size: rem(12);
+						margin: 0px;
+						padding: 0px;
+						span {
+							margin-left: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__chart-doughnut {
+		width: 100%;
+		max-width: rem(202);
+		position: relative;
+	}
+	&__chart-info {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: rem(20);
+	}
+	&__chart-title {
+		color: $gray-600;
+		font-size: rem(16.232);
+		line-height: 1.4;
+		span {
+			color: var(--body-color-dark-secondary,#{$body-color});
+		}
+	}
+	&__chart-text {
+		color: $gray-600;
+		font-family: $font-family-monospace;
+		font-size: rem(11);
+		line-height: 1.4;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

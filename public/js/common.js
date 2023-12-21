@@ -128,51 +128,152 @@ function eventHandler() {
 	let chartDoughnutJsArr = document.querySelectorAll('.chart-doughnut-js');
 
 	if (chartDoughnutJsArr.length > 0) {
-		chartDoughnutJsArr.forEach((chartDoughnutJs) => {
-			const data = {
-				labels: [
-					'Whoosh',
-					'ИранНефть',
-					'Ростелеком',
-					'Белуга',
-					'Компания',
-					'МТС',
-					'Газпромбанк'
-				],
-				// labels: chartDoughnutJs.dataset.labels,
-				datasets: [{
-					// label: 'My First Dataset',
-					data: [300, 200, 50, 20, 30, 100, 150],
-					backgroundColor: [
-						'#A2E48A',
-						'#72AAFF',
-						'#F43ECC',
-						'#7DF9BD',
-						'#0D6CA1',
-						'#7DF9BD',
-						'#F97D7D'
-					],
-					hoverOffset: 4,
-				}],
-				options: {
-					borderWidth: '12px',
+		chartDoughnutJsArr.forEach((chartDoughnutJs, index) => {
+			console.log(chartDoughnutJs.dataset.labels);
+			const getOrCreateLegendList = (chart, id) => {
+				const legendContainer = chartDoughnutJs.parentElement.nextElementSibling;
+				let listContainer = legendContainer.querySelector('ul');
+			
+				if (!listContainer) {
+					listContainer = document.createElement('ul');
+					listContainer.style.display = 'flex';
+					listContainer.style.flexDirection = 'column';
+					listContainer.style.margin = 0;
+					listContainer.style.padding = 0;
+			
+					legendContainer.appendChild(listContainer);
+				}
+			
+				return listContainer;
+			};
+			
+			const htmlLegendPlugin = {
+				id: 'htmlLegend',
+				afterUpdate(chart, args, options) {
+					// console.log(chartDoughnutJs);
+					const ul = getOrCreateLegendList(chart, options.containerID);
+					// Remove old legend items
+					while (ul.firstChild) {
+						ul.firstChild.remove();
+					}
+			
+					// Reuse the built-in legendItems generator
+					const items = chart.options.plugins.legend.labels.generateLabels(chart);
+
+					const itemsNums = chart.legend.chart.config._config.data.datasets[0].data;
+					let itemsSum = 0;
+					itemsNums.forEach((item) => itemsSum += item);
+
+					items.forEach((item, index) => {
+						const li = document.createElement('li');
+						li.style.alignItems = 'center';
+						li.style.cursor = 'pointer';
+						li.style.display = 'flex';
+						li.style.flexDirection = 'row';
+			
+						li.onclick = () => {
+							const {type} = chart.config;
+							if (type === 'pie' || type === 'doughnut') {
+								chart.toggleDataVisibility(item.index);
+							} else {
+								chart.setDatasetVisibility(item.datasetIndex, !chart.isDatasetVisible(item.datasetIndex));
+							}
+							chart.update();
+						};
+			
+						// Color box
+						const boxSpan = document.createElement('span');
+						boxSpan.style.background = item.fillStyle;
+						boxSpan.style.borderColor = item.strokeStyle;
+						boxSpan.style.borderWidth = item.lineWidth + 'px';
+			
+						// Text
+						const textContainer = document.createElement('p');
+						textContainer.style.textDecoration = item.hidden ? 'line-through' : '';
+
+						// Precent
+						const precentContainer = document.createElement('span');
+						precentContainer.innerHTML = ` ${(itemsNums[index] / itemsSum * 100).toFixed(2)} %`;
+						
+						const text = document.createTextNode(item.text);
+						textContainer.appendChild(text);
+						textContainer.appendChild(precentContainer);
+						
+						li.appendChild(boxSpan);
+						li.appendChild(textContainer);
+						ul.appendChild(li);
+					});
 				}
 			};
+
+			const dataObj = [
+				{
+					labels: [
+						'Whoosh',
+						'ИранНефть',
+						'Ростелеком',
+						'Белуга',
+						'Компания',
+						'МТС',
+						'Газпромбанк'
+					],
+					datasets: [{
+						// label: 'My First Dataset',
+						data: [10, 20, 15, 5, 50, 100, 123],
+						backgroundColor: [
+							'#A2E48A',
+							'#72AAFF',
+							'#F43ECC',
+							'#7DF9BD',
+							'#0D6CA1',
+							'#7DF9BD',
+							'#F97D7D'
+						],
+						hoverOffset: 4,
+					}],
+				},
+				{
+					labels: [
+						'Металургия',
+						'Телеком',
+						'Финансы',
+						'Общественное питание'
+					],
+					datasets: [{
+						// label: 'My First Dataset',
+						data: [10, 20, 15, 5],
+						backgroundColor: [
+							'#A2E48A',
+							'#72AAFF',
+							'#F43ECC',
+							'#7DF9BD',
+						],
+						hoverOffset: 4,
+					}],
+				}
+			];
 			
 			new Chart(chartDoughnutJs, {
 				type: 'doughnut',
-				data: data,
+				data: dataObj[index],
 				options: {
+					aspectRatio: 1,
 					responsive: true,
 					borderWidth: 0,
-					radius: '202',
+					radius: '101',
+					cutout: '85%',
 					plugins: {
-						legend: {
-							position: 'right',
+						htmlLegend: {
+							containerID: 'legend-container',
 						},
-					}
+						legend: {
+							display: false,
+						}
+					},
 				},
+				plugins: [htmlLegendPlugin],
 			});
+
 		})
 	}
 		

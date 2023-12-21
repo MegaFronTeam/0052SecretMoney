@@ -78,8 +78,20 @@ mixin sAnalytics(data)
 							+tr('table-img-4.jpg', 'ИранНефть', 'MLTP')
 				.tabs__content
 					.h3 Компании
-					canvas.chart-doughnut-js
+					+e.chart-doughnut-wrap
+						+e.chart-doughnut
+							canvas.chart-doughnut-js
+							+e.chart-info
+								+e.chart-title #[span 125 347,05] ₽
+								+e.chart-text 7 компаний
+						#legend-container
 				.tabs__content
 					.h3 Отрасли
-					canvas.chart-doughnut-js
+					+e.chart-doughnut-wrap
+						+e.chart-doughnut
+							canvas.chart-doughnut-js
+							+e.chart-info
+								+e.chart-title #[span 125 347,05] ₽
+								+e.chart-text 4 отрасли
+						#legend-container
 	// end sAnalytics

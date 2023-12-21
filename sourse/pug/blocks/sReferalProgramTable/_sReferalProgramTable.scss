@@ -276,6 +276,15 @@
 			margin: rem(12);
 		}
 	}
+	&__btn-wrap {
+		padding: rem(16);
+	}
+	&__btn {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: rem(8);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

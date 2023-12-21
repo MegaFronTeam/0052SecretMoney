@@ -712,4 +712,7 @@ h1, .h1 {
 	&:hover{
 		--op: 0;
 	}
+	&.btn-sm {
+		--bs-btn-padding-y: #{rem(10)};
+	}
 }
