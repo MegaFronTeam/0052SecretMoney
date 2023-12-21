@@ -136,10 +136,6 @@ function eventHandler() {
 			
 				if (!listContainer) {
 					listContainer = document.createElement('ul');
-					listContainer.style.display = 'flex';
-					listContainer.style.flexDirection = 'column';
-					listContainer.style.margin = 0;
-					listContainer.style.padding = 0;
 			
 					legendContainer.appendChild(listContainer);
 				}
@@ -166,10 +162,6 @@ function eventHandler() {
 
 					items.forEach((item, index) => {
 						const li = document.createElement('li');
-						li.style.alignItems = 'center';
-						li.style.cursor = 'pointer';
-						li.style.display = 'flex';
-						li.style.flexDirection = 'row';
 			
 						li.onclick = () => {
 							const {type} = chart.config;
