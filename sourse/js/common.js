@@ -129,7 +129,7 @@ function eventHandler() {
 
 	if (chartDoughnutJsArr.length > 0) {
 		chartDoughnutJsArr.forEach((chartDoughnutJs, index) => {
-			console.log(chartDoughnutJs.dataset.labels);
+			
 			const getOrCreateLegendList = (chart, id) => {
 				const legendContainer = chartDoughnutJs.parentElement.nextElementSibling;
 				let listContainer = legendContainer.querySelector('ul');
@@ -150,7 +150,7 @@ function eventHandler() {
 			const htmlLegendPlugin = {
 				id: 'htmlLegend',
 				afterUpdate(chart, args, options) {
-					// console.log(chartDoughnutJs);
+					
 					const ul = getOrCreateLegendList(chart, options.containerID);
 					// Remove old legend items
 					while (ul.firstChild) {
@@ -277,6 +277,19 @@ function eventHandler() {
 		})
 	}
 		
+	let passCode = document.querySelectorAll('.passcode-js');
+
+	if (passCode.length > 0) {
+		passCode.forEach((item, index) => {
+			item.addEventListener('input', (e) => {
+				if (index < passCode.length - 1) {
+					if(!e.data == '') {
+						passCode[index + 1].focus();
+					}
+				}
+			})
+		})
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

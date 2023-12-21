@@ -21,13 +21,13 @@ block pagecontent
 				.col-12
 					+e.sms-row.row.justify-content-center
 						.col-auto
-							+input("-")
+							+input("-")(maxlength="1").passcode-js
 						.col-auto
-							+input("-")
+							+input("-")(maxlength="1").passcode-js
 						.col-auto
-							+input("-")
+							+input("-")(maxlength="1").passcode-js
 						.col-auto
-							+input("-")
+							+input("-")(maxlength="1").passcode-js
 					button.btn.btn-primary.w-100 Отправить
 				p.mt-4 Запросить код повторно можно через 0 мин 54 сек.
 	//- +parts('footer')
