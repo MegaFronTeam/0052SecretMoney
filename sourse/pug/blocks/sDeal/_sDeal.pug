@@ -36,8 +36,33 @@ mixin sDeal(firstVersion)
 								.close: +iconC('close')
 								.title Фильтр
 								+input('Выберите', 'date', 'Период')
-								+input('Выберите', 'select', 'Тикер')
-								+input('Выберите', 'select', 'Тип')
+								//- +input('Выберите', 'select', 'Тикер')
+								+b.custom-select--js
+									+e.head
+										span.placholder Тикер
+										p Выберите
+									+e.dropdown
+										+e.search
+											.button: +icon('search')
+											input(type='text', placeholder='Искать')
+										+e.dropdown-item placeholder 1
+										+e.dropdown-item placeholder 2
+										+e.dropdown-item placeholder 3
+										+e.dropdown-item test
+										+e.dropdown-item text
+								+b.custom-select--js
+									+e.head
+										span.placholder Тип
+										p Выберите
+									+e.dropdown
+										+e.search
+											.button: +icon('search')
+											input(type='text', placeholder='Искать')
+										+e.dropdown-item placeholder 1
+										+e.dropdown-item placeholder 2
+										+e.dropdown-item placeholder 3
+										+e.dropdown-item test
+										+e.dropdown-item text
 								.row
 									.col
 										.btn.btn-outline-dark.w-100(href='#') Сбросить

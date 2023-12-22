@@ -126,6 +126,10 @@
 
 .custom-select {
 	position: relative;
+	margin-bottom: rem(16);
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 0;
+	}
 	&.active {
 		.custom-select__head {
 			&:after {
@@ -175,7 +179,7 @@
 		top: calc(100% + rem(8));
 		left: 0;
 		width: 100%;
-		max-height: rem(300);
+		max-height: rem(200);
 		overflow: auto;
 		border: 1px solid $gray-400;
 		background-color: var(--panel-bg, $white);
@@ -203,6 +207,45 @@
 			}
 			&:hover {
 				background-color: var(--gray-200, $gray-200);
+			}
+		}
+	}
+	&__search {
+		position: relative;
+		input{
+			border: none;
+			font-size: rem(14);
+			width: 100%;
+			outline: none !important;
+			line-height: 1.3;
+			padding: rem(9) rem(6) rem(9) rem(32);
+			border-radius: 0;
+			border-bottom: 1px solid var(--table-border-color, #{$gray-300});
+			&::placeholder {
+				color: $gray-500;
+			}
+		}
+		.icon{
+			font-size: rem(16);
+			border: none !important;
+		}
+		.button{
+			position: absolute;
+			left: rem(8);
+			top: 0;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: none !important;
+			border: none !important;
+			@include media-breakpoint-up(lg) {
+				left: rem(8);
+			}
+			.icon {
+				fill: none;
+				stroke: currentColor;
+				stroke-width: rem(2);
 			}
 		}
 	}
