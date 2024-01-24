@@ -509,6 +509,9 @@
 			padding: rem(16);
 			z-index: 1000;
 			transform: translateY(100%);
+			.custom-select {
+				margin-bottom: rem(16);
+			}
 		}
 		@include media-breakpoint-up(xl) {
 			display: flex;
@@ -563,7 +566,7 @@
 				}
 			}
 			&__dropdown {
-				@include media-breakpoint-down(lg) {
+				@include media-breakpoint-down(xl) {
 					top: unset;
 					bottom: calc(100% + rem(8));
 				}
@@ -580,16 +583,25 @@
 		label {
 			width: 100%;
 		}
+		.icon {
+			position: absolute;
+			top: rem(17);
+			right: rem(12);
+			fill: none;
+			stroke-width: rem(2);
+			stroke: currentColor;
+		}
 	}
 	&__input {
 		border-radius: rem(12);
 		border: 1px solid $gray-400;
-		padding: rem(22) rem(12) rem(8);
+		padding: rem(22) rem(40) rem(8) rem(12);
 		@include media-breakpoint-up(xl) {
-			padding: rem(22) rem(12) rem(11);
+			padding: rem(22) rem(40) rem(11) rem(12);
 		}
 		&::placeholder {
-			color: rgba($color: $body-color, $alpha: 0.3);
+			// color: rgba($color: $body-color, $alpha: 0.3);
+			color: var(--body-color-dark, #1b1a1d);
 		}
 		&::-webkit-calendar-picker-indicator {
 			background-image: var(--calendar, url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.8333 3.33337H4.16667C3.24619 3.33337 2.5 4.07957 2.5 5.00004V16.6667C2.5 17.5872 3.24619 18.3334 4.16667 18.3334H15.8333C16.7538 18.3334 17.5 17.5872 17.5 16.6667V5.00004C17.5 4.07957 16.7538 3.33337 15.8333 3.33337Z' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.3335 1.66663V4.99996' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6.6665 1.66663V4.99996' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.5 8.33337H17.5' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A"));

@@ -105,6 +105,38 @@ $accordion-button-active-icon-dark:  url("data:image/svg+xml,<svg xmlns='http://
   @media (min-width: 768px) {
     --stock-price-bg: #{$gray-900};
   }
+
+  .air-datepicker {
+    --adp-background-color: #{$gray-800};
+    --adp-background-color-hover:  #{$gray-900};
+    --adp-background-color-active: #000;
+    --adp-background-color-in-range: rgba(92, 196, 239, .1);
+    --adp-background-color-in-range-focused: rgba(92, 196, 239, .2);
+    --adp-background-color-selected-other-month-focused: #8ad5f4;
+    --adp-background-color-selected-other-month: #a2ddf6;
+    --adp-color: #fff;
+    --adp-color-secondary: #8ad5f4;
+    --adp-accent-color: #{$body-color-dark};
+    --adp-color-other-month: var(--icon-color);
+    --adp-color-disabled: #aeaeae;
+    --adp-color-disabled-in-range: #939393;
+    --adp-color-other-month-hover: #c5c5c5;
+    --adp-border-color: #dbdbdb;
+    --adp-border-color-inner: #efefef;
+    --adp-border-color-inline: #d7d7d7;
+    --adp-nav-arrow-color: var(--adp-color-secondary);
+    --adp-nav-color-secondary: var(--adp-color-secondary);
+    --adp-day-name-color: #ff9a19;
+    --adp-day-name-color-hover: #8ad5f4;
+    --adp-cell-background-color-selected: #5cc4ef;
+    --adp-cell-background-color-selected-hover: #45bced;
+    --adp-cell-background-color-in-range: rgba(92, 196, 239, 0.1);
+    --adp-cell-background-color-in-range-hover: rgba(92, 196, 239, 0.2);
+    --adp-cell-border-color-in-range: var(--adp-cell-background-color-selected);
+    --adp-time-track-color: #dedede;
+    --adp-time-track-color-hover: #b1b1b1;
+  }
+
   &:root {
     --bs-success-rgb: 108, 212, 162;
     --bs-danger-rgb: 205, 115, 131;

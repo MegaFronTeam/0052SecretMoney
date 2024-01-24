@@ -35,7 +35,11 @@ mixin sDeal(firstVersion)
 							+e.filter-mobile
 								.close: +iconC('close')
 								.title Фильтр
-								+input('Выберите', 'date', 'Период')
+								.sDeal__input-wrap.form-group.data-picker-wrap
+									span.sDeal__input-title Период
+									input.sDeal__input.form-control.data-picker--js(type="text" readonly="readonly" placeholder='Выберите')
+									+icon('calendar')
+								//- +input('Выберите', 'date', 'Период')
 								//- +input('Выберите', 'select', 'Тикер')
 								+b.custom-select--js
 									+e.head

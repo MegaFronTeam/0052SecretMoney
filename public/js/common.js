@@ -81,8 +81,21 @@ function eventHandler() {
 		customSelects.forEach((customSelect) => {
 			customSelect.querySelector('.custom-select__head').addEventListener('click', () => {
 				customSelect.classList.toggle('active');
-
-			})
+				
+			});
+			customSelect.querySelectorAll('.custom-select__dropdown-item').forEach((item) => {
+				item.addEventListener('click', () => {
+					if(customSelect.querySelector('span').classList.contains('placholder')) {
+						let placeholder = customSelect.querySelector('.placholder').innerHTML;
+						customSelect.querySelector('.custom-select__head').innerHTML = `
+							<span class="placholder">${placeholder}</span>
+							<p>${item.innerHTML}</p>
+						`;
+					} else {
+						customSelect.querySelector('.custom-select__head').innerHTML = item.innerHTML;
+					}
+        });
+			});
 			let selectSearch = customSelect.querySelector('.custom-select__search');
 			if(selectSearch) {
 				customSelect.addEventListener('keyup', () => {
@@ -310,6 +323,30 @@ function eventHandler() {
 			})
 		})
 	}
+
+	let dataPickers = document.querySelectorAll('.data-picker-wrap');
+	if (dataPickers.length > 0) {
+		let position = 'bottom left';
+		if (window.matchMedia('(max-width: 1200px)').matches) {
+			position = 'top left';
+		}
+		for (let dataPickerEll of dataPickers) {
+			let dataPicker = dataPickerEll.querySelector('.data-picker--js');
+
+			new AirDatepicker(dataPicker, {
+				range: true,
+				multipleDatesSeparator: ' - ',
+				autoClose: false,
+				// inline: true,
+				container: dataPickerEll,
+				position: position,
+				navTitles: {
+					days: 'yyyy <i>MMMM</i>',
+				},
+			});
+		}
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
